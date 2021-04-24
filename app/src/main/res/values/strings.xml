@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name1">ALIAS</string>
+    <string name="app_name2">па-беларуску</string>
+    <string name="start_button">Пачаць</string>
+    <string name="rules_button">Правілы</string>
+    <string name="exit_button">Выхад</string>
+    <string name="offline_button">Аффлайн</string>
+    <string name="network_game_button">Па-сетцы</string>
+    <string name="cancel_button">Назад</string>
+    <string name="next_button">Далей</string>
+    <string name="choose_mode">Абярыце рэжым</string>
+</resources>
