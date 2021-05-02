@@ -12,20 +12,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onButtonClick(View view) {
+    public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button_start: {
-                Intent intent = new Intent(this, ModeMenuActivity.class);
+                Intent intent = new Intent(MainActivity.this, ModeMenuActivity.class);
                 startActivity(intent);
                 break;
             }
             case R.id.button_rules: {
-                Intent intent = new Intent(this, RulesActivity.class);
+                Intent intent = new Intent(MainActivity.this, RulesActivity.class);
                 startActivity(intent);
                 break;
             }
             case R.id.button_exit: {
-                System.exit(0);
+                this.finishAffinity();
+                break;
             }
         }
     }
