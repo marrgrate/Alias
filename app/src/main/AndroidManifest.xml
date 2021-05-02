@@ -5,7 +5,7 @@
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name1"
+            android:label="Alias па-беларуску"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
@@ -15,7 +15,26 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ModeMenuActivity"></activity>
+        <activity android:name=".ModeMenuActivity"
+                  android:parentActivityName=".MainActivity"
+                  android:label="@string/mode_title">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.example.alias.MainActivity"/>
+        </activity>
+        <activity android:name=".RulesActivity"
+                  android:parentActivityName=".MainActivity"
+                  android:label="@string/rules_title">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.example.alias.MainActivity"/>
+        </activity>
+        <activity android:name=".TeamsActivity"
+                  android:parentActivityName=".ModeMenuActivity"
+                  android:label="@string/teams_title">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.example.alias.ModeMenuActivity"/></activity>
     </application>
 
 </manifest>

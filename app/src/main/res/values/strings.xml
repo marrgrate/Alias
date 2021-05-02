@@ -1,4 +1,5 @@
 <resources>
+    <string name="menu_title">Меню</string>
     <string name="app_name1">ALIAS</string>
     <string name="app_name2">па-беларуску</string>
     <string name="start_button">Пачаць</string>
@@ -6,7 +7,17 @@
     <string name="exit_button">Выхад</string>
     <string name="offline_button">Аффлайн</string>
     <string name="network_game_button">Па-сетцы</string>
-    <string name="cancel_button">Назад</string>
+    <string name="back_button">Назад</string>
     <string name="next_button">Далей</string>
+    <string name="mode_title">Рэжым</string>
     <string name="choose_mode">Абярыце рэжым</string>
+    <string name="rules_title">Правілы</string>
+    <string name="rules_content">У працэсе гульні неабходна за адведзены час патлумачыць чальцам
+        сваёй каманды словы, якія зяўляюцца на экране,
+        не выкарыстоўваючы аднакарэнныя і іншамоўныя словы.
+        Перамагае каманда, гульцы якой хутчэй набяруць
+        зададзеную колькасць слоў для перамогі.</string>
+    <string name="team1_name">Каманда1</string>
+    <string name="team2_name">Каманда2</string>
+    <string name="teams_title">Каманды</string>
 </resources>
