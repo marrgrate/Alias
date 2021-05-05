@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include android:id="@+id/teams_list_action_bar"
+             layout="@layout/action_bar"/>
+    <ListView
+            android:layout_height="386dp" android:layout_width="match_parent"/>
+    <Button
+            android:text="@string/add_team"
+            android:layout_width="266dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_rounded_corner"
+            android:id="@+id/delete_team"
+
+            android:onClick="onClick"/>
+    <Button
+            android:text="@string/add_team"
+            android:layout_width="266dp"
+            android:layout_height="63dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_rounded_corner"
+            android:id="@+id/button_add_team"
+            android:layout_marginTop="36dp"
+            android:onClick="onClick"/>
+    <Button
+            android:text="@string/next_button"
+            android:id="@+id/button_next"
+            android:layout_width="266dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_rounded_corner"
+            android:layout_marginTop="2dp"
+            android:onClick="onClick"/>
 
 </LinearLayout>
