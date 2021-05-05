@@ -20,4 +20,6 @@
     <string name="team1_name">Каманда1</string>
     <string name="team2_name">Каманда2</string>
     <string name="teams_title">Каманды</string>
+    <string name="add_team">Дабавіць каманду</string>
+    <string name="delete_team">Выдаліць каманду</string>
 </resources>

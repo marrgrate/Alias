@@ -12,7 +12,7 @@ public class RulesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rules);
         Toolbar toolbar = findViewById(R.id.rules_action_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     public void onClick(View view) {
         finish();

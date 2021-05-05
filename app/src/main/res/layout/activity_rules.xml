@@ -2,15 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:label="@string/rules_title">
     <include
             android:id="@+id/rules_action_bar"
-            layout="@layout/action_bar" android:layout_height="55dp" android:layout_width="393dp"/>
+            android:layout="@layout/action_bar"/>
     <TextView
-            android:layout_width="338dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rules_content"
             android:layout_centerHorizontal="true"

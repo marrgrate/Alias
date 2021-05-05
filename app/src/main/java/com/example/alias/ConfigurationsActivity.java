@@ -1,2 +1,4 @@
-package com.example.alias;public class ConfigurationsActivity {
+package com.example.alias;
+
+public class ConfigurationsActivity {
 }
