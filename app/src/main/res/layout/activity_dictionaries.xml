@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <include layout="@layout/action_bar"
+             android:id="@+id/dictionaries_action_bar"/>
+    <ListView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_above="@+id/button_next_dictionaries"
+              android:layout_marginBottom="3dp"
+              android:layout_below="@+id/dictionaries_action_bar"/>
+    <Button
+            android:text="@string/next_button"
+            android:id="@+id/button_next_dictionaries"
+            android:background="@drawable/btn_rounded_corner"
+            android:layout_width="266dp"
+            android:layout_height="63dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp"/>
+</RelativeLayout>
