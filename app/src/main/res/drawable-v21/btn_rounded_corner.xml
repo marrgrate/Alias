@@ -7,9 +7,9 @@
     <ripple android:color="?attr/colorControlHighlight">
         <item>
             <shape android:shape="rectangle"
-                   android:tint="#0091ea">
+                   android:tint="@color/colorPrimary">
                 <corners android:radius="20dp"/>
-                <solid android:color="#1a237e"/>
+                <solid android:color="@color/colorPrimaryDark"/>
                 <padding android:bottom="6dp"/>
             </shape>
         </item>

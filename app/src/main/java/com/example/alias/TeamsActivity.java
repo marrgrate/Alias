@@ -1,5 +1,6 @@
 package com.example.alias;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -7,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class TeamsActivity extends AppCompatActivity {
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,10 +19,14 @@ public class TeamsActivity extends AppCompatActivity {
         newGame.addDefaultTeam();   //1 team
         newGame.addDefaultTeam();   //2 team
 
+        Toolbar toolbar = findViewById(R.id.teams_list_action_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         ListView listView = (ListView) findViewById(R.id.team_least);
-        final ArrayAdapter<Team> adapter = new ArrayAdapter<Team>(this,
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,
-                newGame.getTeams());
+                newGame.getTeamsNames());
         listView.setAdapter(adapter);
 
         EditText editText;
@@ -30,36 +37,31 @@ public class TeamsActivity extends AppCompatActivity {
         deleteButton = (Button)findViewById(R.id.button_delete_team);
 
         addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
+
                 newGame.addDefaultTeam();
                 adapter.notifyDataSetChanged();
             }
         });
 
         deleteButton.setOnClickListener(new View.OnClickListener() {
+           @Override
             public void onClick(View v) {
                 newGame.deleteTeam();
                 adapter.notifyDataSetChanged();
             }
         });
+
     }
 
-//    public void onClick(View view) {
-//        switch (view.getId()) {
-//            case R.id.button_add_team: {
-//                newGame.addDefaultTeam();
-//                adapter.notifyDataSetChanged();
-//                break;
-//            }
-//            case R.id.button_network: {
-//                newGame.deleteTeam();
-//                adapter.notifyDataSetChanged();
-//                break;
-//            }
-//            case R.id.button_next: {
-//                break;}
-//        }
-//    }
+    public void onClick(View view) {
+        int viewId = view.getId();
+        if(viewId == R.id.button_next_teams) {
+            Intent intent = new Intent(this, ConfigurationsActivity.class);
+            startActivity(intent);
+        }
+    }
 
 
 //        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

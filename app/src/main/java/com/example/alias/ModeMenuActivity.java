@@ -18,15 +18,15 @@ public class ModeMenuActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.button_offline: {
-                Intent intent = new Intent(this, TeamsActivity.class);
-                startActivity(intent);
-                break;
-            }
-            case R.id.button_network: {
-                break;
-            }
+        int id = view.getId();
+
+        if (id == R.id.button_offline) {
+            Intent intent = new Intent(this, TeamsActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.button_network) {
+            //todo
+            Intent intent = new Intent(this, TeamsActivity.class);
+            startActivity(intent);
         }
     }
 }

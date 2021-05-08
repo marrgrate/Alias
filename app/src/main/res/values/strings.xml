@@ -1,7 +1,7 @@
 <resources>
     <string name="menu_title">Меню</string>
-    <string name="app_name1">ALIAS</string>
-    <string name="app_name2">па-беларуску</string>
+    <string name="app_name">Alias</string>
+    <string name="app_name_extended">па-беларуску</string>
     <string name="start_button">Пачаць</string>
     <string name="rules_button">Правілы</string>
     <string name="exit_button">Выхад</string>
@@ -17,9 +17,10 @@
         не выкарыстоўваючы аднакарэнныя і іншамоўныя словы.
         Перамагае каманда, гульцы якой хутчэй набяруць
         зададзеную колькасць слоў для перамогі.</string>
-    <string name="team1_name">Каманда1</string>
-    <string name="team2_name">Каманда2</string>
     <string name="teams_title">Каманды</string>
     <string name="add_team">Дабавіць каманду</string>
     <string name="delete_team">Выдаліць каманду</string>
+    <string name="config_title">Налады гульні</string>
+    <string name="max_words_num_title">Колькасць словаў</string>
+    <string name="time_config_title">Час на раунд</string>
 </resources>

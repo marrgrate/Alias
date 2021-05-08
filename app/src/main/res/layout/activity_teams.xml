@@ -5,7 +5,7 @@
               android:orientation="vertical">
 
     <include android:id="@+id/teams_list_action_bar"
-             android:layout="@layout/action_bar"/>
+             layout="@layout/action_bar"/>
     <ListView
             android:id="@+id/team_least"
             android:layout_height="375dp"
@@ -31,13 +31,15 @@
             android:layout_height="63dp"
             android:gravity="center"
             android:layout_centerHorizontal="true"
-            android:layout_above="@id/button_next"/>
+            android:layout_above="@id/button_next_teams"/>
     <Button
             android:text="@string/next_button"
-            android:id="@+id/button_next"
+            android:id="@+id/button_next_teams"
             android:background="@drawable/btn_rounded_corner"
             android:layout_width="266dp"
             android:layout_height="63dp"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp"
+            android:onClick="onClick"/>
 </RelativeLayout>
