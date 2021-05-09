@@ -1,4 +1,4 @@
-package com.example.alias;
+package com.example.alias.offline.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

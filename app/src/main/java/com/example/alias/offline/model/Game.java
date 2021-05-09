@@ -1,4 +1,4 @@
-package com.example.alias;
+package com.example.alias.offline.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +18,7 @@ public class Game {
 
    public void addTeam(){   //default name
       if(teams.size()<=5) {
-         Team team = new Team(default_names[(int) (Math.random() * default_names.length)]);
+         Team team = new Team(default_names[(int) (Math.random() * default_names.length + 1)]);
          teams.add(team);
       }
    }
@@ -54,12 +54,4 @@ public class Game {
       return maxWordsNumber;
    }
 
-
-//   public String[] getTeamsNames(){
-//      String[] names = new String[teams.size()];
-//      for(int i = 0; i < teams.size(); i++) {
-//         names[i] = (teams.get(i)).toString();  //какая-то херня, надо исправить!!!
-//      }
-//      return names;
-//   }
 }

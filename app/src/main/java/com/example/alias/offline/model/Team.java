@@ -1,4 +1,4 @@
-package com.example.alias;
+package com.example.alias.offline.model;
 
 public class Team {
     protected String teamName;
