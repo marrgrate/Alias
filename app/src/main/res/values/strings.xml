@@ -20,7 +20,10 @@
     <string name="teams_title">Каманды</string>
     <string name="add_team">Дабавіць каманду</string>
     <string name="delete_team">Выдаліць каманду</string>
-    <string name="config_title">Налады гульні</string>
+    <string name="config_title">Налады</string>
     <string name="max_words_num_title">Колькасць словаў</string>
     <string name="time_config_title">Час на раунд</string>
+    <string name="dictionaries_title">Катэгорыі</string>
+    <string name="team_plays">Гуляе каманда</string>
+    <string name="click_to_start">Націсніце каб пачаць гульню</string>
 </resources>
