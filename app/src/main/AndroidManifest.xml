@@ -49,5 +49,8 @@
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.example.alias.ConfigurationsActivity"/></activity>
+        <activity android:name=".StartGameActivity"
+                  android:screenOrientation="portrait"
+                  android:parentActivityName=".DictionariesActivity"/>
     </application>
 </manifest>
