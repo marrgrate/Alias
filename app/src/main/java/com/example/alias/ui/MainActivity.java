@@ -1,12 +1,10 @@
-package com.example.alias;
+package com.example.alias.ui;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.alias.R;
 
 public class MainActivity extends AppCompatActivity {
     @Override

@@ -1,9 +1,10 @@
-package com.example.alias;
+package com.example.alias.ui;
 
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import com.example.alias.R;
 
 public class RulesActivity extends AppCompatActivity {
     @Override

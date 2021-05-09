@@ -1,15 +1,15 @@
-package com.example.alias;
+package com.example.alias.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import com.example.alias.R;
 
 public class ConfigurationsActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener{
     private TextView curTime;
@@ -36,6 +36,8 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
 
         curTime = findViewById(R.id.text_view_cur_time);
         curTime.setText("60");
+
+        //todo add minimum limitation for words and time
     }
 
     @Override
