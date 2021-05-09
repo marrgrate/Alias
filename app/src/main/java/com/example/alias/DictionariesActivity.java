@@ -1,6 +1,8 @@
 package com.example.alias;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -13,5 +15,9 @@ public class DictionariesActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    }
+    public void onClick(View view){
+        Intent intent = new Intent(this, StartGameActivity.class);
+        startActivity(intent);
     }
 }

@@ -17,5 +17,6 @@
             android:layout_height="63dp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="24dp"
+            android:onClick="onClick"/>
 </RelativeLayout>
