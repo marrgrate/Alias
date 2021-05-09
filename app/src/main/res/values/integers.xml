@@ -2,4 +2,6 @@
 <resources>
     <integer name="max_words_num">100</integer>
     <integer name="max_game_time">100</integer>
+    <integer name="min_words_num">30</integer>
+    <integer name="min_game_time">30</integer>
 </resources>
