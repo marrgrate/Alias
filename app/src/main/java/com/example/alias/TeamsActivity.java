@@ -7,17 +7,14 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class TeamsActivity extends AppCompatActivity {
+public class TeamsActivity extends AppCompatActivity{
 
+    private Game newGame = new Game();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teams);
-
-        final Game newGame = new Game();
-        newGame.addDefaultTeam();   //1 team
-        newGame.addDefaultTeam();   //2 team
 
         Toolbar toolbar = findViewById(R.id.teams_list_action_bar);
         setSupportActionBar(toolbar);
@@ -29,39 +26,37 @@ public class TeamsActivity extends AppCompatActivity {
                 newGame.getTeamsNames());
         listView.setAdapter(adapter);
 
-        EditText editText;
         Button addButton;
         Button deleteButton;
+        Button nextButton;
 
-        addButton = (Button)findViewById(R.id.button_add_team);
-        deleteButton = (Button)findViewById(R.id.button_delete_team);
+        addButton = findViewById(R.id.button_add_team);
+        deleteButton = findViewById(R.id.button_delete_team);
+        nextButton = findViewById(R.id.button_next_teams);
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                newGame.addDefaultTeam();
+                newGame.addTeam();
                 adapter.notifyDataSetChanged();
             }
         });
 
         deleteButton.setOnClickListener(new View.OnClickListener() {
-           @Override
+            @Override
             public void onClick(View v) {
                 newGame.deleteTeam();
                 adapter.notifyDataSetChanged();
             }
         });
 
-    }
-
-    public void onClick(View view) {
-        int viewId = view.getId();
-        if(viewId == R.id.button_next_teams) {
-            Intent intent = new Intent(this, ConfigurationsActivity.class);
-            startActivity(intent);
-        }
-    }
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TeamsActivity.this, ConfigurationsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 //        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
