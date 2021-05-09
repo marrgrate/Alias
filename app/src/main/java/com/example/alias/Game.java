@@ -4,23 +4,25 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Game {
-   private final ArrayList<Team> teams = new ArrayList<Team>();
+   private ArrayList<Team> teams = new ArrayList<Team>();
    private final String[] default_names = new String[]{"Хмарачосы", "Пацукі", "Парсюкі", "Валошкі"};
    private int time; //seconds
    private int maxWordsNumber;    //max number of words to win
 
-   public void addDefaultTeam(){   //default name
+   public Game(){
+      addTeam();
+      addTeam();
+      setTime(60);
+      setMaxWordsNumber(60);
+   }
+
+   public void addTeam(){   //default name
       if(teams.size()<=5) {
          Team team = new Team(default_names[(int) (Math.random() * default_names.length)]);
          teams.add(team);
       }
    }
-   public void addTeam(String team_name){
-      if(teams.size()<=5) {
-         Team team = new Team(team_name);
-         teams.add(team);
-      }
-   }
+
    public void deleteTeam(){
       if(teams.size()>2) {
          teams.remove(teams.size() - 1);
@@ -36,16 +38,20 @@ public class Game {
       return teamNames;
    }
 
+   public void setTime(int time) {
+      this.time = time;
+   }
+
    public int getTime() {
       return time;
    }
 
-   public void setDefaultTime() {
-      this.time = 60;
+   public void setMaxWordsNumber(int maxWordsNumber) {
+      this.maxWordsNumber = maxWordsNumber;
    }
 
-   public void setTime(int time) {
-      this.time = time;
+   public int getMaxWordsNumber() {
+      return maxWordsNumber;
    }
 
 
