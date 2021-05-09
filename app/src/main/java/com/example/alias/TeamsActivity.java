@@ -7,7 +7,7 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class TeamsActivity extends AppCompatActivity{
+public class TeamsActivity extends AppCompatActivity {
 
     private Game newGame = new Game();
 
@@ -57,41 +57,6 @@ public class TeamsActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-
-
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> a, View v, int position,
-//                                    long id) {
-//                Toast.makeText(TeamsActivity.this, "Clicked", Toast.LENGTH_LONG)
-//                        .show();
-//            }
-//        });
-//    }
-
-
-//    edtText.addTextChangedListener(new TextWatcher() {
-//        @Override
-//        public void onTextChanged(CharSequence s, int start, int before, int count) {
-//            // TODO Auto-generated method stub
-//        }
-//
-//        @Override
-//        public void beforeTextChanged(CharSequence s, int start, int count,
-//        int after) {
-//            // TODO Auto-generated method stub
-//
-//        }
-//
-//        @Override
-//        public void afterTextChanged(Editable s) {
-//            // TODO Auto-generated method stub
-//            if (!edtText.getText().toString().equalsIgnoreCase("")){
-//
-//                // here textview.setText(edtText.getText());
-//
-//            }
-//        }
-//    });
+    }
 }
 
