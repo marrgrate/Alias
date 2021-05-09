@@ -1,7 +1,10 @@
 package com.example.alias;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
@@ -12,26 +15,27 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
     private TextView curTime;
     private TextView curWordsNumber;
 
+    @SuppressLint("SetTextI18n")
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
 
         Toolbar toolbar = findViewById(R.id.config_action_bar);
         setSupportActionBar(toolbar);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final SeekBar seekBarWords = (SeekBar)findViewById(R.id.seekbar_words);
+        final SeekBar seekBarWords = findViewById(R.id.seekbar_words);
         seekBarWords.setOnSeekBarChangeListener(this);
 
-        final SeekBar seekBarTime= (SeekBar)findViewById(R.id.seekbar_time);
+        final SeekBar seekBarTime= findViewById(R.id.seekbar_time);
         seekBarTime.setOnSeekBarChangeListener(this);
 
-        curWordsNumber = (TextView)findViewById(R.id.text_view_cur_words_num);
-        curWordsNumber.setText("0");
+        curWordsNumber = findViewById(R.id.text_view_cur_words_num);
+        curWordsNumber.setText("60");
 
-        curTime = (TextView)findViewById(R.id.text_view_cur_time);
-        curTime.setText("0");
+        curTime = findViewById(R.id.text_view_cur_time);
+        curTime.setText("60");
     }
 
     @Override
@@ -53,4 +57,8 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
         }
     }
 
+    public void onClick(View view) {
+        Intent intent = new Intent(this, DictionariesActivity.class);
+        startActivity(intent);
+    }
 }
