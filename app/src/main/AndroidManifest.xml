@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.alias">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
             android:icon="@mipmap/ic_launcher"
             android:label="Alias па-беларуску"
@@ -52,5 +54,7 @@
         <activity android:name=".ui.StartGameActivity" android:screenOrientation="portrait"/>
         <activity android:name=".ui.ResultActivity" android:screenOrientation="portrait"
         android:label="@string/result_label"/>
+        <activity android:name=".ui.FinishGameActivity" android:screenOrientation="portrait"
+                  android:label="@string/finish_game"/>
     </application>
 </manifest>
