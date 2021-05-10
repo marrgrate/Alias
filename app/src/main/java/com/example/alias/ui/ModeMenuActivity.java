@@ -1,11 +1,17 @@
 package com.example.alias.ui;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.alias.R;
+
+import static android.content.Context.CONNECTIVITY_SERVICE;
 
 public class ModeMenuActivity extends AppCompatActivity {
     @Override
@@ -25,9 +31,20 @@ public class ModeMenuActivity extends AppCompatActivity {
             Intent intent = new Intent(this, TeamsActivity.class);
             startActivity(intent);
         } else if (id == R.id.button_network) {
-            //todo
-            Intent intent = new Intent(this, TeamsActivity.class);
-            startActivity(intent);
+            if (!isOnline()) {
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "No internet connection", Toast.LENGTH_SHORT);
+                toast.show();
+            } else {
+                Intent intent = new Intent(this, TeamsActivity.class);
+                startActivity(intent);
+            }
         }
+    }
+    public boolean isOnline() {
+        ConnectivityManager connMgr = (ConnectivityManager)
+                getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        return (networkInfo != null && networkInfo.isConnected());
     }
 }
