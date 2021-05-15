@@ -1,14 +1,24 @@
 package com.example.alias.offline.model;
 
-public class Team {
-    protected String teamName;
+import java.io.Serializable;
 
-    public String getTeamName(){
-        return teamName;
+public class Team
+implements Serializable {
+    private String team;
+    public Result result;
+
+    public String getName(){
+        return this.team;
+    }
+    public void setTeam(Team team) {
+        this.team = team.team;
+        this.result = team.result;
+    }
+    public String toString() {
+        return this.team;
     }
 
     Team(String name){
-        teamName = name;
+        team = name;
     }
-
 }
