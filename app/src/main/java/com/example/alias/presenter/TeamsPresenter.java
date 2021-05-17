@@ -2,6 +2,7 @@ package com.example.alias.presenter;
 
 import android.content.Intent;
 import com.example.alias.offline.model.Game;
+import com.example.alias.offline.model.Team;
 
 public class TeamsPresenter {
     private TeamsView teamsView;
@@ -11,32 +12,37 @@ public class TeamsPresenter {
         this.teamsView = teamsView;
         this.game = game;
     }
-    public String[] getData() {
-        return game.getTeamsNames();
-    }
-
-    void onResume() {
-    }
 
     public void onAddClick() {
-        if(game.teams.size() <= 5){
-            game.addTeam();
-        }
+        game.addTeam();
     }
 
-    public void onDeleteClick(){
-        if(game.teams.size() > 2){
-            game.teams.remove(game.teams.size()-1);
-        }
+    public void onDeleteClick() {
+        game.teams.remove(game.teams.size() - 1);
     }
 
     public Intent onNextClick(Intent intent){
         return intent.putExtra("game", game);
     }
 
+    void onResume() {
+    }
+
     void onDestroy() {
     }
 
     public void onFinished() {
+        if (teamsView != null) {
+            teamsView.setItems();
+        }
+    }
+
+    public void onBindTeamsRowViewAtPosition(int position, TeamsRowView rowView){
+        Team team = game.getTeams().get(position);
+        rowView.setTitle(team.getName());
+    }
+
+    public int getTeamsRowsCount() {
+        return game.getTeams().size();
     }
 }

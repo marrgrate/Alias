@@ -4,21 +4,22 @@ import java.io.Serializable;
 
 public class Team
 implements Serializable {
-    private String team;
+    private String name;
     public Result result;
 
-    public String getName(){
-        return this.team;
-    }
-    public void setTeam(Team team) {
-        this.team = team.team;
-        this.result = team.result;
-    }
-    public String toString() {
-        return this.team;
+    public Team() {
+        name = "NULL";
     }
 
-    Team(String name){
-        team = name;
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(Team name) {
+        this.name = name.name;
+        this.result = name.result;
+    }
+    public Team(String name){
+        this.name = name;
     }
 }
