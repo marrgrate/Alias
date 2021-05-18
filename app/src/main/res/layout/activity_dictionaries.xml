@@ -4,8 +4,10 @@
                 android:layout_height="match_parent">
     <include layout="@layout/action_bar"
              android:id="@+id/dictionaries_action_bar"/>
-    <ListView android:layout_width="match_parent"
+    <ListView
+        android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:id="@+id/dictionaries_list"
               android:layout_above="@+id/button_next_dictionaries"
               android:layout_marginBottom="3dp"
               android:layout_below="@+id/dictionaries_action_bar"/>
@@ -17,6 +19,5 @@
             android:layout_height="63dp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="24dp"
-            android:onClick="onClick"/>
+            android:layout_marginBottom="24dp"/>
 </RelativeLayout>

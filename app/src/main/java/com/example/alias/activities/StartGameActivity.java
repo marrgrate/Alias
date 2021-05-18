@@ -1,4 +1,4 @@
-package com.example.alias.ui;
+package com.example.alias.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,19 +8,27 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.alias.R;
+import com.example.alias.offline.model.Game;
 
 public class StartGameActivity extends AppCompatActivity {
+    Game myGame;
     TextView timer;
+    TextView teamPlays;
     ImageButton skipButton;
     ImageButton acceptButton;
     TextView word;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_game);
+        if (savedInstanceState != null) {
+            myGame = savedInstanceState.getParcelable("game");
+        }
 
-        skipButton = (ImageButton)findViewById(R.id.button_skip);
-        acceptButton= (ImageButton)findViewById(R.id.button_accept);
-
+        skipButton = findViewById(R.id.button_skip);
+        acceptButton= findViewById(R.id.button_accept);
+        teamPlays = findViewById(R.id.text_view_team_name);
+        //todo определить команду которая играет
+        teamPlays.setText(myGame.teamPlaying.toString());
         skipButton.setVisibility(View.INVISIBLE);
         acceptButton.setVisibility(View.INVISIBLE);
 
@@ -30,11 +38,13 @@ public class StartGameActivity extends AppCompatActivity {
     public void onClick(View view){
         if(view.getId() == R.id.start_game){
             view.setVisibility(View.INVISIBLE);
-            timer = (TextView)findViewById(R.id.timer);
+            timer = findViewById(R.id.timer);
             new CountDownTimer(60000, 1000) {
 
                 public void onTick(long millisUntilFinished) {
-                    timer.setText("00:"+ millisUntilFinished / 1000);
+                    timer.setText((millisUntilFinished/1000) < 10?
+                            "00:0"+ millisUntilFinished / 1000 :
+                            "00:"+ millisUntilFinished / 1000);
                 }
 
                 public void onFinish() {

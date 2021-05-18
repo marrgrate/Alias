@@ -10,9 +10,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.alias.R;
 import com.example.alias.offline.model.Game;
-import com.example.alias.presenter.TeamsAdapter;
-import com.example.alias.presenter.TeamsPresenter;
-import com.example.alias.presenter.TeamsView;
+import com.example.alias.presenter.Teams.TeamsAdapter;
+import com.example.alias.presenter.Teams.TeamsPresenter;
+import com.example.alias.presenter.Teams.TeamsView;
 
 public class TeamsActivity extends AppCompatActivity
         implements TeamsView {

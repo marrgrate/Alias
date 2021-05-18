@@ -1,25 +1,31 @@
-package com.example.alias.ui;
+package com.example.alias.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.alias.R;
+import com.example.alias.offline.model.Game;
 
 public class ConfigurationsActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener{
-    private TextView curTime;
-    private TextView curWordsNumber;
+    TextView curTime;
+    TextView curWordsNumber;
+    Button buttonNext;
+    Game game;
 
     @SuppressLint("SetTextI18n")
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
+
+        Intent intent = getIntent();
+        game = (Game)intent.getSerializableExtra("game");
 
         Toolbar toolbar = findViewById(R.id.config_action_bar);
         setSupportActionBar(toolbar);
@@ -28,7 +34,7 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
         final SeekBar seekBarWords = findViewById(R.id.seekbar_words);
         seekBarWords.setOnSeekBarChangeListener(this);
 
-        final SeekBar seekBarTime= findViewById(R.id.seekbar_time);
+        final SeekBar seekBarTime = findViewById(R.id.seekbar_time);
         seekBarTime.setOnSeekBarChangeListener(this);
 
         curWordsNumber = findViewById(R.id.text_view_cur_words_num);
@@ -37,7 +43,13 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
         curTime = findViewById(R.id.text_view_cur_time);
         curTime.setText("60");
 
-        //todo add minimum limitation for words and time
+        buttonNext = findViewById(R.id.button_next_config);
+    }
+
+    public void onClick(View v) {
+        Intent intent = new Intent(ConfigurationsActivity.this, DictionariesActivity.class);
+        intent.putExtra("game", game);
+        startActivity(intent);
     }
 
     @Override
@@ -47,20 +59,21 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
 
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
-
     }
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
-        if (seekBar.getId() == R.id.seekbar_time)
+        if (seekBar.getId() == R.id.seekbar_time){
+            game.setMaxTime(seekBar.getProgress());
+            if(seekBar.getProgress()<30)
+                seekBar.setProgress(30);
             curTime.setText(String.valueOf(seekBar.getProgress()));
-        else {
+        }
+        else if (seekBar.getId() == R.id.seekbar_words){
+            game.setMaxWordsNumber(seekBar.getProgress());
+            if(seekBar.getProgress()<20)
+                seekBar.setProgress(20);
             curWordsNumber.setText(String.valueOf(seekBar.getProgress()));
         }
-    }
-
-    public void onClick(View view) {
-        Intent intent = new Intent(this, DictionariesActivity.class);
-        startActivity(intent);
     }
 }

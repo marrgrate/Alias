@@ -1,21 +1,52 @@
 package com.example.alias.offline.model;
 
+import android.annotation.SuppressLint;
+import android.os.Parcel;
+import com.example.alias.presenter.Dictionary.DictionaryParser;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class Dictionary
-        implements DictionaryParser {
+@SuppressLint("ParcelCreator")
+public class Dictionary
+        implements DictionaryParser, Serializable {
     public String name;
-    public String difficulty;
     public String disclaimer;
     public int words_count = 0;
     public ArrayList<String> words = new ArrayList<>();
     public ArrayList<String> usedWords = new ArrayList<>();
+
+    public Dictionary(){
+        name = "DICTIONARY_NAME";
+        disclaimer = "DISCLAIMER";
+        words_count = 0;
+        words.add("word1");
+        words.add("word2");
+        usedWords.add("used_word1");
+    }
+
+    protected Dictionary(Parcel in) {
+        name = in.readString();
+        disclaimer = in.readString();
+        words_count = in.readInt();
+        //words = in.readArrayList();
+        //usedWords = in.readArrayList();
+    }
+
+
+    public String getName(){
+        return name;
+    }
+
+    public Dictionary loadDictionary(String filename) throws IOException {
+        Dictionary dic = new Dictionary();
+        return dic.Parse(dic.readFileAsString(filename));
+    }
 
     public String getRandomWord(){
         if(this.words.size() == 0) {
@@ -49,6 +80,16 @@ public abstract class Dictionary
     }
     public Dictionary Parse(String jsonString) {
         Gson gson = new Gson();
-        return  gson.fromJson(jsonString, Dictionary.class);
+        return gson.fromJson(jsonString, Dictionary.class);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
     }
 }

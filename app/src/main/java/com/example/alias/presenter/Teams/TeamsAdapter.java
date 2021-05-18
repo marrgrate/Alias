@@ -1,4 +1,4 @@
-package com.example.alias.presenter;
+package com.example.alias.presenter.Teams;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;

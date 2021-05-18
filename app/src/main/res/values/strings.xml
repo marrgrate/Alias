@@ -26,4 +26,12 @@
     <string name="dictionaries_title">Катэгорыі</string>
     <string name="team_plays">Гуляе каманда</string>
     <string name="click_to_start">Націсніце каб пачаць гульню</string>
+    <string name="result_label">Вынікі</string>
+    <string name="guessed">Адгаданы:</string>
+    <string name="skipped">Прапушчаны:</string>
+    <string name="finish_game">Канец гульні!</string>
+    <string name="winner_title">Перамагла каманда</string>
+    <string name="back_to_main_menu">Пачаць зноў</string>
+    <string name="create_game">Стварыць гульню</string>
+    <string name="join_game">Далучыцца да гульні</string>
 </resources>

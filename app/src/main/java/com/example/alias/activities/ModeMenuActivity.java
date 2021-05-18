@@ -1,4 +1,4 @@
-package com.example.alias.ui;
+package com.example.alias.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,8 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.alias.R;
-
-import static android.content.Context.CONNECTIVITY_SERVICE;
+import com.example.alias.network.CreateGameActivity;
 
 public class ModeMenuActivity extends AppCompatActivity {
     @Override
@@ -29,6 +28,7 @@ public class ModeMenuActivity extends AppCompatActivity {
 
         if (id == R.id.button_offline) {
             Intent intent = new Intent(this, TeamsActivity.class);
+            intent.putExtra("mode", "offline");
             startActivity(intent);
         } else if (id == R.id.button_network) {
             if (!isOnline()) {
@@ -36,7 +36,8 @@ public class ModeMenuActivity extends AppCompatActivity {
                         "No internet connection", Toast.LENGTH_SHORT);
                 toast.show();
             } else {
-                Intent intent = new Intent(this, TeamsActivity.class);
+                Intent intent = new Intent(this, CreateGameActivity.class);
+                intent.putExtra("mode", "network");
                 startActivity(intent);
             }
         }

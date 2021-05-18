@@ -1,4 +1,4 @@
-package com.example.alias.presenter;
+package com.example.alias.presenter.Teams;
 
 import android.content.Intent;
 import com.example.alias.offline.model.Game;

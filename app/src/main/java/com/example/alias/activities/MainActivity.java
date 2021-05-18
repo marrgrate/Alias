@@ -1,4 +1,4 @@
-package com.example.alias.ui;
+package com.example.alias.activities;
 
 import android.content.Intent;
 import android.os.Bundle;

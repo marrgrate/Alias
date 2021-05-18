@@ -6,13 +6,13 @@
 
     <include android:id="@+id/teams_list_action_bar"
              layout="@layout/action_bar"/>
-    <ListView
-            android:id="@+id/team_least"
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/teams_recycler_view"
             android:layout_height="wrap_content"
             android:layout_width="match_parent" android:layout_above="@+id/button_add_team"
             android:layout_marginBottom="3dp"
             android:layout_marginTop="3dp" android:layout_below="@+id/teams_list_action_bar">
-    </ListView>
+    </androidx.recyclerview.widget.RecyclerView>
 
     <Button
             android:text="@string/add_team"
@@ -22,7 +22,8 @@
             android:layout_height="63dp"
             android:gravity="center"
             android:layout_centerHorizontal="true"
-            android:layout_above="@id/button_delete_team"/>
+            android:layout_above="@id/button_delete_team"
+            android:onClick="onAddClick"/>
     <Button
             android:text="@string/delete_team"
             android:id="@+id/button_delete_team"
@@ -31,7 +32,8 @@
             android:layout_height="63dp"
             android:gravity="center"
             android:layout_centerHorizontal="true"
-            android:layout_above="@id/button_next_teams"/>
+            android:layout_above="@id/button_next_teams"
+            android:onClick="onDeleteClick"/>
     <Button
             android:text="@string/next_button"
             android:id="@+id/button_next_teams"
@@ -40,5 +42,6 @@
             android:layout_height="63dp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="24dp"
+            android:onClick="onNextClick"/>
 </RelativeLayout>

@@ -10,13 +10,13 @@ import com.example.alias.R;
 import com.example.alias.offline.model.Game;
 
 public class ResultActivity extends AppCompatActivity {
-    Game myGame;
+    Game game;
     Button nextButton;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         if (savedInstanceState != null) {
-            myGame = savedInstanceState.getParcelable("game");
+            game = savedInstanceState.getParcelable("game");
         }
 
         Toolbar toolbar = findViewById(R.id.result_action_bar);
@@ -26,18 +26,16 @@ public class ResultActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if(myGame.teamPlaying.result.getResult() <= myGame.getMaxWordsNumber()) {
+                Intent intent;
+                if(game.teamPlaying.result.getResult() <= game.getMaxWordsNumber()) {
                     //todo запуск startGameActivity для следующей команды
-                    Intent intent = new Intent(ResultActivity.this, StartGameActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putParcelable("game", myGame);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
+                    intent = new Intent(ResultActivity.this, StartGameActivity.class);
+                    intent.putExtra("game", game);
                 } else {
-                    Intent intent = new Intent(ResultActivity.this, FinishGameActivity.class);
-                    intent.putExtra("winner", myGame.teamPlaying);
-                    startActivity(intent);
+                    intent = new Intent(ResultActivity.this, FinishGameActivity.class);
+                    intent.putExtra("winner", game.teamPlaying);
                 }
+                startActivity(intent);
 
             }
         }
