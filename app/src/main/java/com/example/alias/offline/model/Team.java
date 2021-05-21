@@ -1,14 +1,20 @@
 package com.example.alias.offline.model;
 
 import java.io.Serializable;
+import java.util.Random;
 
 public class Team
-implements Serializable {
+    implements Serializable {
     private String name;
     public Result result;
 
     public Team() {
-        name = "NULL";
+        //todo проверка на уникальность
+        Random random = new Random();
+        String[] DEFAULT_NAMES = new String[]{"Хмарачосы", "Тутэйшыя", "Валошкі", "Крумкачы",
+        "Дармаеды", "Крывічы", "Палешукі"};
+        name = DEFAULT_NAMES[random.nextInt(DEFAULT_NAMES.length)];
+        result = new Result();
     }
 
     public String getName(){
@@ -19,7 +25,8 @@ implements Serializable {
         this.name = name.name;
         this.result = name.result;
     }
-    public Team(String name){
-        this.name = name;
+
+    public Result getResult(){
+        return result;
     }
 }

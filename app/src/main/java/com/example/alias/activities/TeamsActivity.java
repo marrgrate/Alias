@@ -1,28 +1,23 @@
 package com.example.alias.activities;
 
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.alias.R;
 import com.example.alias.offline.model.Game;
-import com.example.alias.presenter.Teams.TeamsAdapter;
-import com.example.alias.presenter.Teams.TeamsPresenter;
-import com.example.alias.presenter.Teams.TeamsView;
+import com.example.alias.offline.model.TeamAdapter;
 
-public class TeamsActivity extends AppCompatActivity
-        implements TeamsView {
-    RecyclerView listView;
+public class TeamsActivity extends AppCompatActivity {
+    Game game = new Game();
     Toolbar toolbar;
+    RecyclerView recyclerView;
     Button addTeam;
     Button deleteTeam;
     Button next;
-    TeamsPresenter teamsPresenter;
-    TeamsAdapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,45 +31,41 @@ public class TeamsActivity extends AppCompatActivity
             setSupportActionBar(toolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-            listView = findViewById(R.id.teams_recycler_view);
             addTeam = findViewById(R.id.button_add_team);
             deleteTeam = findViewById(R.id.button_delete_team);
             next = findViewById(R.id.button_next_teams);
-            teamsPresenter = new TeamsPresenter(this, new Game());
 
+            recyclerView = findViewById(R.id.teams_recycler_view);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            final TeamAdapter adapter = new TeamAdapter();
+            adapter.setItems(game.getTeams());
+            recyclerView.setAdapter(adapter);
+
+            addTeam.setOnClickListener(v -> {
+                adapter.addItem();
+                if(game.teams.size()<6)
+                    game.teams.add(adapter.getLastItem());
+                recyclerView.setAdapter(adapter);
+            });
+
+            deleteTeam.setOnClickListener(v -> {
+                adapter.deleteItem();
+                if(game.teams.size()>2)
+                    game.teams.remove(game.teams.size() - 1);
+                recyclerView.setAdapter(adapter);
+            });
+
+            next.setOnClickListener(v -> {
+                Intent intent1 = new Intent(TeamsActivity.this, ConfigurationsActivity.class);
+                intent1.putExtra("game", game);
+                startActivity(intent1);
+            });
         } else if (mode.equals("network")) {
-                //todo for network game
-                toolbar = findViewById(R.id.teams_list_action_bar);
-                setSupportActionBar(toolbar);
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            }
-        }
-
-    public void setItems() {
-        listView.setAdapter(adapter = new TeamsAdapter(teamsPresenter));
-    }
-
-    @Override
-    public void onAddClick(){
-        teamsPresenter.onAddClick();
-        adapter.notifyDataSetChanged();
-    }
-
-    @Override
-    public void onDeleteClick() {
-        teamsPresenter.onDeleteClick();
-        adapter.notifyDataSetChanged();
-    }
-
-    @Override
-    public void onNextClick(View v) {
-        Intent intent = new Intent(this, ConfigurationsActivity.class);
-        intent = teamsPresenter.onNextClick(intent);
-        try {
-            startActivity(intent);
-        } catch (ActivityNotFoundException e) {
-            // Define what your app should do if no activity can handle the intent.
+            //todo for network game
+            toolbar = findViewById(R.id.teams_list_action_bar);
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
-
 }
+
