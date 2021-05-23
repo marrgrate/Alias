@@ -17,6 +17,8 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
     TextView curWordsNumber;
     Button buttonNext;
     Game game;
+    SeekBar seekBarWords;
+    SeekBar seekBarTime;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -31,14 +33,14 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final SeekBar seekBarWords = findViewById(R.id.seekbar_words);
+        seekBarWords = findViewById(R.id.seekbar_words);
         seekBarWords.setOnSeekBarChangeListener(this);
 
-        final SeekBar seekBarTime = findViewById(R.id.seekbar_time);
+        seekBarTime = findViewById(R.id.seekbar_time);
         seekBarTime.setOnSeekBarChangeListener(this);
 
         curWordsNumber = findViewById(R.id.text_view_cur_words_num);
-        curWordsNumber.setText("60");
+        curWordsNumber.setText("30");
 
         curTime = findViewById(R.id.text_view_cur_time);
         curTime.setText("60");
@@ -47,6 +49,8 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
     }
 
     public void onClick(View v) {
+        game.setMaxWordsNumber(seekBarWords.getProgress());
+        game.setMaxTime(seekBarTime.getProgress());
         Intent intent = new Intent(ConfigurationsActivity.this, DictionariesActivity.class);
         intent.putExtra("game", game);
         startActivity(intent);
@@ -54,7 +58,6 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
     }
 
     @Override
