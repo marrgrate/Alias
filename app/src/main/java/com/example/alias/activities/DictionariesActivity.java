@@ -1,86 +1,81 @@
 package com.example.alias.activities;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Toast;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.example.alias.R;
 import com.example.alias.offline.model.Dictionary;
-import com.example.alias.presenter.Dictionary.DictionaryRepository;
-import com.example.alias.presenter.Dictionary.DictionariesPresenter;
-import com.example.alias.presenter.Dictionary.DictionariesView;
+import com.example.alias.offline.model.DictionaryDeserializer;
+import com.example.alias.offline.model.Game;
+import com.example.alias.offline.model.JSONHelper;
+import com.example.alias.offline.model.adapter.DictionaryAdapter;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-import static android.view.View.VISIBLE;
+public class DictionariesActivity extends AppCompatActivity {
 
-public class DictionariesActivity extends AppCompatActivity
-    implements DictionariesView {
-
+    Game game;
+    ArrayList<Dictionary> dictionaries = new ArrayList<>();
+    RecyclerView recyclerView;
     Button buttonNext;
-    ListView dictionariesListView;
-    DictionariesPresenter presenter;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dictionaries);
+
+        Intent intent = getIntent();
+        game = (Game) intent.getSerializableExtra("game");
 
         Toolbar toolbar = findViewById(R.id.dictionaries_action_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         buttonNext = findViewById(R.id.button_next_dictionaries);
-        dictionariesListView = findViewById(R.id.dictionaries_list);
-        presenter = new DictionariesPresenter(this, new DictionaryRepository());
+        buttonNext.setClickable(false);
+        recyclerView = findViewById(R.id.dictionaries_list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        Intent intent = getIntent();
-        presenter.getExtra(intent);
-    }
+        final DictionaryAdapter adapter = new DictionaryAdapter();
 
-    @Override
-    public void onButtonClick() {
-        buttonNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DictionariesActivity.this, StartGameActivity.class);
-                presenter.putExtra(intent);
-                intent = presenter.onNextClick(intent);
-                startActivity(intent);
-            }
-        });
-    }
-
-    @Override
-    public void onItemSelected(){
-        if(dictionariesListView.isClickable()) {
-            //todo если нажат элемент, выделить его
-            dictionariesListView.setSelected(true);
+        String jsonFileString1 = null;
+        String jsonFileString2 = null;
+        try {
+            jsonFileString1 = JSONHelper.getJsonFromAssets(getApplicationContext(), "dictionary0.json");
+            jsonFileString2 = JSONHelper.getJsonFromAssets(getApplicationContext(), "dictionary1.json");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    }
+        Type dictionary = new TypeToken<Dictionary>() {
+        }.getType();
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(dictionary, new DictionaryDeserializer())
+                .create();
+        Dictionary d = gson.fromJson(jsonFileString1, Dictionary.class);
+        dictionaries.add(d);
+        d = gson.fromJson(jsonFileString2, Dictionary.class);
+        dictionaries.add(d);
 
-    @Override
-    public void showDictionaries(ArrayList<Dictionary> d) {
-        dictionariesListView.setVisibility(VISIBLE);
-        final ArrayAdapter<Dictionary> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1,
-                d);
-        dictionariesListView.setAdapter(adapter);
-        dictionariesListView.setClickable(true);
-    }
+        adapter.setItems(dictionaries);
 
-    @Override
-    public void showError(){
-        Toast.makeText(this, "No dictionary selected", Toast.LENGTH_LONG).show();
-    }
+        recyclerView.setAdapter(adapter);
 
-    @Override
-    protected void onDestroy() {
-        presenter.onDestroy();
-        super.onDestroy();
+        buttonNext.setOnClickListener(v -> {
+            //todo добавить проверку выбран ли словарь
+            Intent intent1 = new Intent(DictionariesActivity.this, StartGameActivity.class);
+            game.setDictionarySelected(dictionaries.get(0));
+            intent1.putExtra("game", game);
+            startActivity(intent1);
+        });
     }
 }
