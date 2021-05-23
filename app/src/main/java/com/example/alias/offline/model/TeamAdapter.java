@@ -20,7 +20,6 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
         public ViewHolder(View view) {
             super(view);
-            // Define click listener for the ViewHolder's View
             textView = view.findViewById(R.id.team_name);
         }
 
@@ -35,19 +34,16 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.team_view, viewGroup, false);
         return new ViewHolder(view);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         viewHolder.bind(teams.get(position));
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return teams.size();
@@ -60,9 +56,20 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
     public void addItem(){
         if(teams.size()<6) {
-            teams.add(new Team());
+            Team team = new Team();
+            ArrayList<String> teamNames = getTeamsNames();
+            while(teamNames.contains(team.getName()))
+                team.setRandomName();
+            teams.add(team);
             notifyDataSetChanged();
         }
+    }
+
+    public ArrayList<String> getTeamsNames(){
+        ArrayList<String> teamNames = new ArrayList<>();
+        for(Team value: teams)
+            teamNames.add(value.getName());
+        return teamNames;
     }
 
     public void deleteItem(){
