@@ -27,7 +27,13 @@
 # Usecase diagram
 ![image](https://user-images.githubusercontent.com/43139654/140605600-2b3a4864-4a8b-4664-bab8-89f664db79af.png)
 
-# Activity diagram
-![изображение](https://user-images.githubusercontent.com/58611218/142723191-b5601c3d-60cd-42ef-8da0-0b71eeaddd0b.png)
+# Activity diagrams
+![изображение](https://user-images.githubusercontent.com/58611218/142774459-bbd221a6-7438-451b-af64-3c8db97a39a3.png)
+
+![изображение](https://user-images.githubusercontent.com/58611218/142774465-887a8ad3-0673-48c4-9734-df99ab200f11.png)
+
+![изображение](https://user-images.githubusercontent.com/58611218/142774472-128014af-1d2e-421e-8409-2707409b5fe0.png)
+
+
 
 
