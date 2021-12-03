@@ -15,7 +15,7 @@ public class FinishGameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_finish);
+        setContentView(R.layout.fragment_finish);
         Intent intent = getIntent();
         winner = intent.getStringExtra("winner");
 

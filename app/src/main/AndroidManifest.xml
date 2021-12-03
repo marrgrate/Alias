@@ -11,7 +11,8 @@
             android:theme="@style/AppTheme" android:allowBackup="false">
         <activity android:name=".activities.MenuActivity"
                   android:screenOrientation="portrait"
-                 android:configChanges="screenLayout|keyboardHidden">
+                 android:configChanges="screenLayout|keyboardHidden"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

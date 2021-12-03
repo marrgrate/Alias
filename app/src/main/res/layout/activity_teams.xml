@@ -22,8 +22,7 @@
             android:layout_height="63dp"
             android:gravity="center"
             android:layout_centerHorizontal="true"
-            android:layout_above="@id/button_delete_team"
-            android:onClick="onAddClick"/>
+            android:layout_above="@id/button_delete_team" />
     <Button
             android:text="@string/delete_team"
             android:id="@+id/button_delete_team"
@@ -32,8 +31,7 @@
             android:layout_height="63dp"
             android:gravity="center"
             android:layout_centerHorizontal="true"
-            android:layout_above="@id/button_next_teams"
-            android:onClick="onDeleteClick"/>
+            android:layout_above="@id/button_next_teams" />
     <Button
             android:text="@string/next_button"
             android:id="@+id/button_next_teams"
@@ -42,6 +40,5 @@
             android:layout_height="63dp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="24dp"
-            android:onClick="onNextClick"/>
+            android:layout_marginBottom="24dp" />
 </RelativeLayout>

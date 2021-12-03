@@ -18,31 +18,27 @@
         app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_panel_bottom_dic"
         app:layout_constraintLeft_toLeftOf="@id/gl_vertical_panel_left_dic"
         app:layout_constraintRight_toRightOf="@id/gl_vertical_panel_right_dic"
-        app:layout_constraintTop_toTopOf="@id/gl_horizontal_panel_top_dic" />
+        app:layout_constraintTop_toTopOf="@+id/dictionaries_list" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dictionaries_list"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        app:layout_constraintHeight_max="300dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toTopOf="@id/gl_horizontal_panel_top_dic"
-        app:layout_constraintBottom_toTopOf="@+id/button_next_dictionaries"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="@id/gl_vertical_panel_left_dic"
-        app:layout_constraintRight_toRightOf="@id/gl_vertical_panel_right_dic"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/gl_vertical_panel_right_dic"
+        app:layout_constraintStart_toStartOf="@+id/gl_vertical_panel_left_dic"
+        app:layout_constraintTop_toTopOf="@+id/gl_horizontal_panel_top_dic"
         tools:listitem="@layout/dictionary_item" />
 
     <Button
         android:id="@+id/button_next_dictionaries"
         android:layout_width="263dp"
         android:layout_height="75dp"
-        android:background="@drawable/ic_big_button_next"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_big_button_next"
+        app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_panel_bottom_dic"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="@id/gl_vertical_panel_left_dic"
-        app:layout_constraintRight_toRightOf="@id/gl_vertical_panel_right_dic"
-        app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_panel_bottom_dic" />
+        app:layout_constraintRight_toRightOf="@id/gl_vertical_panel_right_dic" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_horizontal_panel_bottom_dic"
@@ -71,4 +67,5 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

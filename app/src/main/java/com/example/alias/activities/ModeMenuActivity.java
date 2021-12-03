@@ -16,7 +16,7 @@ public class ModeMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mode_menu);
+        setContentView(R.layout.fragment_mode_menu);
 
         Toolbar toolbar = findViewById(R.id.mode_action_bar);
         setSupportActionBar(toolbar);

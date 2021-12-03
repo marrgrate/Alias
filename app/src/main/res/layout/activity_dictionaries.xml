@@ -4,13 +4,14 @@
                 android:layout_height="match_parent">
     <include layout="@layout/action_bar"
              android:id="@+id/dictionaries_action_bar"/>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dictionaries_list"
         android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:id="@+id/dictionaries_list"
-              android:layout_above="@+id/button_next_dictionaries"
-              android:layout_marginBottom="3dp"
-              android:layout_below="@+id/dictionaries_action_bar"/>
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_next_dictionaries"
+        android:layout_below="@+id/dictionaries_action_bar"
+        android:layout_marginBottom="3dp" />
     <Button
             android:text="@string/next_button"
             android:id="@+id/button_next_dictionaries"

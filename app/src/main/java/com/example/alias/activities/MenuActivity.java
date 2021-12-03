@@ -13,17 +13,4 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
     }
 
-    public void onClick(View view) {
-        int viewId = view.getId();
-
-        if (viewId == R.id.button_start) {
-            Intent intent = new Intent(this, ModeMenuActivity.class);
-            startActivity(intent);
-        } else if (viewId == R.id.button_rules) {
-            Intent intent = new Intent(this, RulesActivity.class);
-            startActivity(intent);
-        } else if (viewId == R.id.button_exit) {
-            this.finishAffinity();
-        }
-    }
 }
