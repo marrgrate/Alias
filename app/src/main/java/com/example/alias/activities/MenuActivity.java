@@ -6,11 +6,11 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.alias.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start_menu);
+        setContentView(R.layout.activity_menu);
     }
 
     public void onClick(View view) {

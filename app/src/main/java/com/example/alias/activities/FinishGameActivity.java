@@ -27,7 +27,7 @@ public class FinishGameActivity extends AppCompatActivity {
 
         main_menu = findViewById(R.id.button_back_to_menu);
         main_menu.setOnClickListener(v -> {
-            Intent intent1 = new Intent(FinishGameActivity.this, MainActivity.class);
+            Intent intent1 = new Intent(FinishGameActivity.this, MenuActivity.class);
             startActivity(intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         });
     }
