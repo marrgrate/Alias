@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/start_menu_background"
+    android:background="@drawable/ic_background"
     tools:context="presentation.StartMenuFragment">
 
     <ImageView
@@ -13,15 +13,19 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/gl_panel_end"
         app:layout_constraintEnd_toStartOf="@+id/gl_panel_right"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start"
-        app:srcCompat="@drawable/background_panel" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_bg_panel_top" />
 
     <TextView
         android:id="@+id/menu_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/alias_text_view"
+        android:text="@string/app_name"
+        android:textSize="80sp"
+        android:textColor="@color/colorMain"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gl_horizontal_title" />
@@ -30,9 +34,10 @@
         android:id="@+id/menu_title_ext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/app_name_extended"
         android:layout_marginHorizontal="2dp"
-        android:background="@drawable/menu_title_ext"
-        android:textSize="14sp"
+        android:textColor="@color/colorMain"
+        android:textSize="32sp"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -41,10 +46,10 @@
 
     <Button
         android:id="@+id/button_start"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_button_start"
         android:scaleType="fitCenter"
-        android:text="Пачаць"
         android:textColorHint="@color/design_default_color_background"
         app:layout_constraintBottom_toTopOf="@+id/gl_button_play_end"
         app:layout_constraintEnd_toStartOf="@+id/gl_button_play_right"
@@ -52,44 +57,55 @@
         app:layout_constraintTop_toTopOf="@+id/gl_button_play_start" />
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/button_rules"
+    <Button
+        android:id="@+id/button_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/ic_light_button_settings"
         android:scaleType="fitCenter"
-        android:src="@drawable/button_settings"
         app:layout_constraintBottom_toTopOf="@+id/gl_buttons_end"
-        app:layout_constraintEnd_toStartOf="@+id/button_exit"
+        app:layout_constraintEnd_toStartOf="@+id/button_rules"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/gl_button_play_left"
         app:layout_constraintTop_toTopOf="@+id/gl_button_play_end" />
 
+    <Button
+        android:id="@+id/button_rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_light_button_info"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/gl_buttons_end"
+        app:layout_constraintEnd_toStartOf="@+id/button_exit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_settings"
+        app:layout_constraintTop_toTopOf="@+id/gl_button_play_end" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
         android:id="@+id/button_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/ic_light_button_exit"
         android:scaleType="fitCenter"
-        android:src="@drawable/button_exit"
         app:layout_constraintBottom_toTopOf="@+id/gl_buttons_end"
         app:layout_constraintEnd_toStartOf="@+id/gl_button_play_right"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_rules"
-        app:layout_constraintTop_toBottomOf="@+id/button_start" />
+        app:layout_constraintTop_toTopOf="@+id/gl_button_play_end" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_horizontal_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_button_play_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_right"
@@ -124,7 +140,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.56" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_button_play_left"
@@ -145,7 +161,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7" />
+        app:layout_constraintGuide_percent="0.75" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
