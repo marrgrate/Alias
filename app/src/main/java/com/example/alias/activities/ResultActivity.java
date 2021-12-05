@@ -1,4 +1,4 @@
-package com.example.alias.activities;
+/*package com.example.alias.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -22,7 +22,7 @@ public class ResultActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+        setContentView(R.layout.fragment_result);
         Intent intent = getIntent();
         game = (Game)intent.getSerializableExtra("game");
 
@@ -61,4 +61,4 @@ public class ResultActivity extends AppCompatActivity {
         }
         );
     }
-}
+}*/

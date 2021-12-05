@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:name="com.example.alias.presentation.StartMenuFragment"
-    tools:context=".activities.MenuActivity">
+    tools:context=".presentation.MenuActivity">
 
 </androidx.fragment.app.FragmentContainerView>

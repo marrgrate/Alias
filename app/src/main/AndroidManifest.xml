@@ -9,7 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" android:allowBackup="false">
-        <activity android:name=".activities.MenuActivity"
+        <activity android:name=".presentation.MenuActivity"
                   android:screenOrientation="portrait"
                  android:configChanges="screenLayout|keyboardHidden"
             android:exported="true">
@@ -19,18 +19,18 @@
             </intent-filter></activity>
         <activity android:name=".activities.ModeMenuActivity"
                   android:screenOrientation="portrait"
-                  android:parentActivityName=".activities.MenuActivity"
+                  android:parentActivityName=".presentation.MenuActivity"
                   android:label="@string/mode_title">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.example.alias.activities.MenuActivity"/></activity>
+                    android:value="com.example.alias.presentation.MenuActivity"/></activity>
         <activity android:name=".activities.RulesActivity"
                   android:screenOrientation="portrait"
-                  android:parentActivityName=".activities.MenuActivity"
+                  android:parentActivityName=".presentation.MenuActivity"
                   android:label="@string/rules_title">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.example.alias.activities.MenuActivity"/></activity>
+                    android:value="com.example.alias.presentation.MenuActivity"/></activity>
         <activity android:name=".activities.TeamsActivity"
                   android:screenOrientation="portrait"
                   android:parentActivityName=".activities.ModeMenuActivity"
