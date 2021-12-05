@@ -1,4 +1,4 @@
-package com.example.alias.activities;
+/*package com.example.alias.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.alias.R;
+import com.example.alias.presentation.MenuActivity;
 
 public class FinishGameActivity extends AppCompatActivity {
     String winner;
@@ -32,3 +33,4 @@ public class FinishGameActivity extends AppCompatActivity {
         });
     }
 }
+*/

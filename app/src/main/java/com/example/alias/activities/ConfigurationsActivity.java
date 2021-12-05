@@ -1,4 +1,4 @@
-package com.example.alias.activities;
+/*package com.example.alias.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -79,4 +79,4 @@ public class ConfigurationsActivity extends AppCompatActivity implements SeekBar
             curWordsNumber.setText(String.valueOf(seekBar.getProgress()));
         }
     }
-}
+}*/

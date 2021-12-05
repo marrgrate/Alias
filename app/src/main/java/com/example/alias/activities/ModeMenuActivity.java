@@ -1,3 +1,4 @@
+/*
 package com.example.alias.activities;
 
 import android.content.Context;
@@ -48,4 +49,4 @@ public class ModeMenuActivity extends AppCompatActivity {
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         return (networkInfo != null && networkInfo.isConnected());
     }
-}
+}*/

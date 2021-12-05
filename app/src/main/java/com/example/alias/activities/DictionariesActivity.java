@@ -1,4 +1,4 @@
-package com.example.alias.activities;
+/*package com.example.alias.activities;
 
 import android.content.Intent;
 import android.os.Build;
@@ -78,4 +78,4 @@ public class DictionariesActivity extends AppCompatActivity {
             startActivity(intent1);
         });
     }
-}
+}*/

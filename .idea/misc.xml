@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/drawable-mdpi-v19/ic_dictionary_item.xml" value="0.22135416666666666" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/drawable-mdpi/ic_dictionary_item.xml" value="0.166015625" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/action_bar.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/activity_config.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/activity_create_game.xml" value="0.275" />
@@ -15,11 +17,14 @@
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/activity_rules.xml" value="0.275" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/activity_start_game.xml" value="0.275" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/activity_teams.xml" value="0.275" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/dictionary_item.xml" value="0.275" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/dictionary_view.xml" value="0.275" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_choose_mode_menu.xml" value="0.275" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_dictionaries.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_finish.xml" value="0.275" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_game_process.xml" value="0.275" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_mode_menu.xml" value="0.275" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_result.xml" value="0.275" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_rules.xml" value="0.275" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_start_menu.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/team_view.xml" value="0.275" />
