@@ -1,3 +1,4 @@
+/*
 package com.example.alias.activities;
 
 import android.content.Intent;
@@ -89,3 +90,4 @@ public class StartGameActivity extends AppCompatActivity {
         });
     }
 }
+*/

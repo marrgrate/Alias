@@ -1,3 +1,4 @@
+/*
 package com.example.alias.activities;
 
 import android.os.Bundle;
@@ -19,3 +20,4 @@ public class RulesActivity extends AppCompatActivity {
         finish();
     }
 }
+*/

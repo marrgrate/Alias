@@ -1,4 +1,4 @@
-package com.example.alias.activities;
+/*package com.example.alias.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.alias.R;
 import com.example.alias.offline.model.Game;
 import com.example.alias.offline.model.TeamAdapter;
-
 public class TeamsActivity extends AppCompatActivity {
     Game game = new Game();
     Toolbar toolbar;
@@ -67,5 +66,5 @@ public class TeamsActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
-}
+} */
 
