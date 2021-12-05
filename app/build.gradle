@@ -26,6 +26,9 @@ android {
         }
     }
 
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
 }
 
 dependencies {
