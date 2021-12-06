@@ -17,47 +17,8 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter></activity>
-        <activity android:name=".activities.ModeMenuActivity"
-                  android:screenOrientation="portrait"
-                  android:parentActivityName=".presentation.MenuActivity"
-                  android:label="@string/mode_title">
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.example.alias.presentation.MenuActivity"/></activity>
-        <activity android:name=".activities.RulesActivity"
-                  android:screenOrientation="portrait"
-                  android:parentActivityName=".presentation.MenuActivity"
-                  android:label="@string/rules_title">
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.example.alias.presentation.MenuActivity"/></activity>
-        <activity android:name=".activities.TeamsActivity"
-                  android:screenOrientation="portrait"
-                  android:parentActivityName=".activities.ModeMenuActivity"
-                  android:label="@string/teams_title">
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.example.alias.activities.ModeMenuActivity"/></activity>
-        <activity android:name=".activities.ConfigurationsActivity"
-                  android:screenOrientation="portrait"
-                  android:parentActivityName=".activities.TeamsActivity"
-                  android:label="@string/config_title">
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.example.alias.activities.TeamsActivity"/></activity>
-        <activity android:name=".activities.DictionariesActivity"
-                  android:screenOrientation="portrait"
-                  android:parentActivityName=".activities.ConfigurationsActivity"
-                  android:label="@string/dictionaries_title">
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.example.alias.activities.ConfigurationsActivity"/></activity>
-        <activity android:name=".activities.StartGameActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".activities.ResultActivity" android:screenOrientation="portrait"
-                  android:label="@string/result_label"/>
-        <activity android:name=".activities.FinishGameActivity" android:screenOrientation="portrait"
-                  android:label="@string/finish_game"/>
-        <activity android:name=".network.CreateGameActivity" android:screenOrientation="portrait"
-                  android:label="Гульня па-сетцы"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 </manifest>
