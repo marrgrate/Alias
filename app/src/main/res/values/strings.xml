@@ -9,6 +9,7 @@
     <string name="network_game_button">Па-сетцы</string>
     <string name="back_button">Назад</string>
     <string name="next_button">Далей</string>
+    <string name="approve_button">Добра</string>
     <string name="mode_title">Рэжым</string>
     <string name="choose_mode">Абярыце рэжым</string>
     <string name="rules_title">Правілы</string>
@@ -21,8 +22,8 @@
     <string name="add_team">Дабавіць каманду</string>
     <string name="delete_team">Выдаліць каманду</string>
     <string name="config_title">Налады</string>
-    <string name="max_words_num_title">Колькасць словаў</string>
-    <string name="time_config_title">Час на раунд</string>
+    <string name="max_words_num_title">Колькасць словаў:</string>
+    <string name="time_config_title">Час на раунд:</string>
     <string name="dictionaries_title">Катэгорыі</string>
     <string name="team_plays">Гуляе каманда</string>
     <string name="click_to_start">Націсніце каб пачаць гульню</string>
