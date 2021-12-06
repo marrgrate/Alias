@@ -17,7 +17,7 @@ public class CreateGameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_config);
+        setContentView(R.layout.fragment_config);
 
         Toolbar toolbar = findViewById(R.id.create_game_action_bar);
         setSupportActionBar(toolbar);

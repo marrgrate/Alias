@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_blur">
+
+    <include
+        android:id="@+id/toolbar_config"
+        layout="@layout/toolbar" />
+
+    <ImageView
+        android:id="@+id/bg_panel_config"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_config"
+        app:layout_constraintEnd_toStartOf="@+id/gl_panel_right_config"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_panel_left_config"
+        app:layout_constraintTop_toTopOf="@+id/gl_panel_start_config"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_bg_panel_top" />
+
+    <TextView
+        android:id="@+id/text_view_max_words_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/max_words_num_title"
+        android:textColor="@color/colorMain"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_words"
+        app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <SeekBar
+        android:id="@+id/seekbar_words"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="@integer/max_words_num"
+        android:progress="60"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_time"
+        app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_max_words_num" />
+
+    <TextView
+        android:id="@+id/text_view_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_config_title"
+        android:textColor="@color/colorMain"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_time"
+        app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar_words" />
+
+    <SeekBar
+        android:id="@+id/seekbar_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="@integer/max_game_time"
+        android:progress="60"
+        app:layout_constraintBottom_toTopOf="@+id/gl_center"
+        app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_time" />
+
+    <TextView
+        android:id="@+id/text_view_cur_words_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorMain"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_words"
+        app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
+        app:layout_constraintStart_toEndOf="@+id/text_view_max_words_num"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/text_view_cur_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_time"
+        app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
+        app:layout_constraintStart_toEndOf="@+id/text_view_time"
+        app:layout_constraintTop_toBottomOf="@id/seekbar_words" />
+
+    <Button
+        android:id="@+id/button_next_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_dark_button_ok"
+        android:text="@string/approve_button"
+        android:textColor="@color/colorMain"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_panel_config"
+        app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
+        app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"
+        app:layout_constraintTop_toTopOf="@+id/gl_center" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_panel_right_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_panel_left_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_panel_start_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_panel_end_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_vertical_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_vertical_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+</androidx.constraintlayout.widget.ConstraintLayout>

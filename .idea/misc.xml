@@ -30,7 +30,7 @@
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/action_bar.xml" value="0.151268115942029" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/action_bar_configurations.xml" value="0.1319078947368421" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/action_bar_dictionaries.xml" value="0.1355263157894737" />
-        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/activity_config.xml" value="0.136" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/activity_config.xml" value="0.152" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/activity_create_game.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/activity_dictionaries.xml" value="0.2" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/activity_menu.xml" value="0.14375" />
@@ -41,6 +41,7 @@
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/dictionary_view.xml" value="0.2" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_choose_mode_menu.xml" value="0.176" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_choose_online_option.xml" value="0.136" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_config.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_configurations.xml" value="0.176" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_dictionaries.xml" value="0.152" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_finish.xml" value="0.1" />
