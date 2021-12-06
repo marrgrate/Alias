@@ -6,7 +6,7 @@
         android:layout_height="match_parent"
         android:label="@string/rules_title">
 <include
-        layout="@layout/action_bar"
+        layout="@layout/toolbar"
         android:id="@+id/rules_action_bar"/>
     <TextView
             android:layout_width="match_parent"
