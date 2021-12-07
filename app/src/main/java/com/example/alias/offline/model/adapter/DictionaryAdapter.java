@@ -43,7 +43,7 @@ public class DictionaryAdapter extends RecyclerView.Adapter<DictionaryAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.dictionary_view, viewGroup, false);
+                .inflate(R.layout.dictionary_item, viewGroup, false);
         return new ViewHolder(view);
     }
 
