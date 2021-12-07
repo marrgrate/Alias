@@ -7,65 +7,108 @@
     android:background="@drawable/ic_background">
 
     <include
-        android:id="@+id/dictionaries_action_bar"
+        android:id="@+id/dictionaries_toolbar"
         layout="@layout/toolbar" />
 
     <ImageView
-        android:id="@+id/panel_dic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_bg_panel_top"
-        app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_panel_bottom_dic"
-        app:layout_constraintLeft_toLeftOf="@id/gl_vertical_panel_left_dic"
-        app:layout_constraintRight_toRightOf="@id/gl_vertical_panel_right_dic"
-        app:layout_constraintTop_toTopOf="@+id/dictionaries_list" />
+        android:id="@+id/panel_dictionaries"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end"
+        app:layout_constraintEnd_toStartOf="@+id/gl_panel_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_panel_left"
+        app:layout_constraintTop_toTopOf="@+id/gl_panel_start"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_bg_panel_top" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dictionaries_list"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/gl_vertical_panel_right_dic"
-        app:layout_constraintStart_toStartOf="@+id/gl_vertical_panel_left_dic"
-        app:layout_constraintTop_toTopOf="@+id/gl_horizontal_panel_top_dic"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/button_next_dictionaries"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline16"
         tools:listitem="@layout/dictionary_item" />
 
     <Button
         android:id="@+id/button_next_dictionaries"
-        android:layout_width="263dp"
-        android:layout_height="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:background="@drawable/ic_big_button_next"
-        app:layout_constraintBottom_toBottomOf="@id/gl_horizontal_panel_bottom_dic"
+        android:fontFamily="@font/nunito"
+        android:text="@string/next_button"
+        android:textColor="@color/colorMain"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/gl_panel_end"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="@id/gl_vertical_panel_left_dic"
-        app:layout_constraintRight_toRightOf="@id/gl_vertical_panel_right_dic" />
+        app:layout_constraintLeft_toLeftOf="@id/gl_panel_left"
+        app:layout_constraintRight_toRightOf="@id/gl_panel_right"
+        app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_horizontal_panel_bottom_dic"
+        android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_vertical_panel_left_dic"
+        android:id="@+id/gl_panel_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_panel_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_horizontal_panel_top_dic"
+        android:id="@+id/gl_panel_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1992288" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_vertical_panel_right_dic"
+        android:id="@+id/gl_panel_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

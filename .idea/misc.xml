@@ -11,6 +11,8 @@
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_background.xml" value="0.13828125" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_background_blur.xml" value="0.1648148148148148" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_bg_blur.xml" value="0.136" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_bg_button_dictionary_item.xml" value="0.18885135135135134" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_bg_button_dictionary_item_selected.xml" value="0.18885135135135134" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_bg_panel_top.xml" value="0.15945945945945947" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_bg_team_item.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_big_button_next.xml" value="0.1" />
@@ -20,12 +22,15 @@
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_configuration_navigation.xml" value="0.1457236842105263" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_dictionaries_navigation.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_dictionary_item.xml" value="0.14671052631578949" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_easy_dictionary.xml" value="0.18885135135135134" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_hard_dictionary.xml" value="0.18885135135135134" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_illustration.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_light_button_exit.xml" value="0.14212962962962963" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_light_button_info.xml" value="0.14212962962962963" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_light_button_settings.xml" value="0.14212962962962963" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_medium_dictionary.xml" value="0.18885135135135134" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_remove_team_button.xml" value="0.1457236842105263" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_team_item.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_team_item_bg.xml" value="0.14671052631578949" />
@@ -39,13 +44,13 @@
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/activity_result.xml" value="0.1355263157894737" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/activity_start_game.xml" value="0.128" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/activity_teams.xml" value="0.264" />
-        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/dictionary_item.xml" value="0.136" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/dictionary_item.xml" value="0.264" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/dictionary_view.xml" value="0.2" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_choose_mode_menu.xml" value="0.176" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_choose_online_option.xml" value="0.176" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_config.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_configurations.xml" value="0.176" />
-        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_dictionaries.xml" value="0.264" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_dictionaries.xml" value="0.176" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_finish.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_game_configuration.xml" value="0.152" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_game_finish.xml" value="0.2111111111111111" />
