@@ -25,6 +25,8 @@
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_easy_dictionary.xml" value="0.18885135135135134" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_hard_dictionary.xml" value="0.18885135135135134" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_illustration.xml" value="0.1" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_illustration1_rules.xml" value="0.10723684210526316" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_illustration2_rules.xml" value="0.10723684210526316" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_light_button_exit.xml" value="0.14212962962962963" />
@@ -34,6 +36,8 @@
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_remove_team_button.xml" value="0.1457236842105263" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_team_item.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_team_item_bg.xml" value="0.14671052631578949" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/font/nunito.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/font/nunito_sans.xml" value="0.16302083333333334" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/action_bar.xml" value="0.151268115942029" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/action_bar_configurations.xml" value="0.1319078947368421" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/action_bar_dictionaries.xml" value="0.1355263157894737" />
@@ -50,18 +54,20 @@
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_choose_online_option.xml" value="0.176" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_config.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_configurations.xml" value="0.176" />
-        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_dictionaries.xml" value="0.176" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_dictionaries.xml" value="0.264" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_finish.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_game_configuration.xml" value="0.152" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_game_finish.xml" value="0.2111111111111111" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_game_process.xml" value="0.1" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_mode_menu.xml" value="0.2" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_result.xml" value="0.15046296296296297" />
-        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_rules.xml" value="0.1" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_rules.xml" value="0.176" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_rules_viewpager.xml" value="0.10897435897435898" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_start_game.xml" value="0.1" />
-        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_start_menu.xml" value="0.264" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_start_menu.xml" value="0.144" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_team_list.xml" value="0.264" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/fragment_teamlist.xml" value="0.12" />
+        <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/rules_pager.xml" value="0.128" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/team_item.xml" value="0.264" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/team_template.xml" value="0.105078125" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/layout/team_template_view.xml" value="0.126171875" />
