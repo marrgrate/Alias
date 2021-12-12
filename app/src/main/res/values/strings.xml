@@ -2,6 +2,7 @@
     <string name="menu_title">Меню</string>
     <string name="app_name">ALIAS</string>
     <string name="app_name_extended">па-беларуску</string>
+    <string name="play_button">Пачаць</string>
     <string name="start_button">Пачаць гульню!</string>
     <string name="rules_button">Правілы</string>
     <string name="exit_button">Выхад</string>
@@ -25,6 +26,13 @@
     <string name="max_words_num_title">Колькасць словаў:</string>
     <string name="time_config_title">Час на раунд:</string>
     <string name="dictionaries_title">Катэгорыі</string>
+    <string name="random_category">Рандом</string>
+    <string name="easy_category">Лёгкі</string>
+    <string name="easy_category_disclaimer">дубрава, алей</string>
+    <string name="middle_category">Сярэдні</string>
+    <string name="middle_category_disclaimer">імпеданс, дэмагогія</string>
+    <string name="hard_category">Сярэдні</string>
+    <string name="hard_category_disclaimer">імпеданс, дэмагогія</string>
     <string name="team_plays">Гуляе каманда</string>
     <string name="click_to_start">Націсніце каб пачаць гульню</string>
     <string name="result_label">Вынікі</string>
