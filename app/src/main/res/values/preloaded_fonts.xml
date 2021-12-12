@@ -2,6 +2,5 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/nunito</item>
-        <item>@font/nunito_sans</item>
     </array>
 </resources>
