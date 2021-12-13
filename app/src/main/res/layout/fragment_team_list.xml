@@ -37,7 +37,7 @@
         android:id="@+id/button_next_teams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_big_button_next"
+        android:background="@drawable/ic_dark_button_bg"
         android:fontFamily="@font/nunito"
         android:text="@string/next_button"
         android:textColor="@color/colorMain"

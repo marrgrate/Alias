@@ -93,7 +93,7 @@
         android:id="@+id/button_next_config"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_dark_button_ok"
+        android:background="@drawable/ic_dark_button_bg"
         android:text="@string/approve_button"
         android:textColor="@color/colorMain"
         android:textSize="20sp"

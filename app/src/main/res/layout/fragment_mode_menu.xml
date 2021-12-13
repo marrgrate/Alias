@@ -24,8 +24,8 @@
 
     <Button
         android:id="@+id/button_offline"
-        android:layout_width="250dp"
-        android:layout_height="63dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/ic_button_mode"
         android:text="@string/offline_button"
         android:textColor="@color/colorMain"
@@ -38,8 +38,8 @@
 
     <Button
         android:id="@+id/button_network"
-        android:layout_width="250dp"
-        android:layout_height="63dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/ic_button_mode"
         android:text="@string/network_game_button"
         android:textSize="16sp"
