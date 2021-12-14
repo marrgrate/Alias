@@ -32,7 +32,11 @@ android {
 }
 
 dependencies {
+    def lifecycle_version = "2.4.0"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
