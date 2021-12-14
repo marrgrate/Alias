@@ -1,5 +1,8 @@
 package com.example.alias.domain
 
-class changeDictionaryUseCase {
+class ChangeDictionaryUseCase(private val gameRepository: GameRepository) {
 
+    fun changeDictionary() {
+
+    }
 }

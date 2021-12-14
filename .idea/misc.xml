@@ -6,6 +6,16 @@
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/action_bar.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/activity_config.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/dictionary_item.xml" value="0.21755464480874318" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_config.xml" value="0.275" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_dictionaries.xml" value="0.21755464480874318" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_game_process.xml" value="0.275" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_mode_menu.xml" value="0.275" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_rules.xml" value="0.145703125" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_start_menu.xml" value="0.21755464480874318" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/fragment_team_list.xml" value="0.145703125" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/team_item.xml" value="0.275" />
+        <entry key="..\:/AndroidProjects/Alias/app/src/main/res/layout/toolbar.xml" value="0.18385416666666668" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable-v21/btn_rounded_corner.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_add_team_button.xml" value="0.1457236842105263" />
         <entry key="..\:/Users/marry/AndroidStudioProjects/alias/app/src/main/res/drawable/ic_background.xml" value="0.13828125" />

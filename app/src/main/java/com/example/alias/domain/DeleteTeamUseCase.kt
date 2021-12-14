@@ -1,4 +1,8 @@
 package com.example.alias.domain
 
-class DeleteTeamUseCase {
+class DeleteTeamUseCase() {
+
+    fun deleteTeam() {
+
+    }
 }

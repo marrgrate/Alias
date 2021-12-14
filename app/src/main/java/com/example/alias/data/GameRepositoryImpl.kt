@@ -1,4 +1,7 @@
 package com.example.alias.data
 
-class GameRepositoryImpl {
+import com.example.alias.domain.GameRepository
+
+class GameRepositoryImpl : GameRepository {
+
 }

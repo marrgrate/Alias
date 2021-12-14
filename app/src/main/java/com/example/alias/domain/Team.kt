@@ -1,3 +1,6 @@
 package com.example.alias.domain
 
-data class Team()
+data class Team(
+    val name: String,
+    val result: Int
+)

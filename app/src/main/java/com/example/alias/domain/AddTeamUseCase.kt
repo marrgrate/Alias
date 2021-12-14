@@ -1,4 +1,8 @@
 package com.example.alias.domain
 
-class AddTeamUseCase {
+class AddTeamUseCase(private val gameRepository: GameRepository) {
+
+    fun addTeam() {
+
+    }
 }

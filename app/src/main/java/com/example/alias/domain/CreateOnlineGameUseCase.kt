@@ -1,4 +1,8 @@
 package com.example.alias.domain
 
-class CreateOnlineGameUseCase {
+class CreateOnlineGameUseCase(private val gameRepository: GameRepository) {
+
+    fun createOfflineGame() {
+
+    }
 }

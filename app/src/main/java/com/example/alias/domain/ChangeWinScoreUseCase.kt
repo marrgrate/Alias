@@ -1,4 +1,8 @@
 package com.example.alias.domain
 
-class ChangeWinScoreUseCase {
+class ChangeWinScoreUseCase(private val gameRepository: GameRepository) {
+
+    fun changeWinScore() {
+        gameRepository.changeWinScore()
+    }
 }
