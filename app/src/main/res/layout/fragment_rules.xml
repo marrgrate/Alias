@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/ic_background_blur"
-        android:label="@string/rules_title">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_blur"
+    android:label="@string/rules_title">
 
     <include
-        layout="@layout/toolbar"
-        android:id="@+id/rules_toolbar"/>
+        android:id="@+id/rules_toolbar"
+        layout="@layout/toolbar" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -25,24 +24,6 @@
         app:srcCompat="@drawable/ic_bg_panel_top"
         tools:ignore="ContentDescription" />
 
-    <TextView
-        android:id="@+id/rules_content"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/nunito"
-        android:paddingLeft="20dp"
-        android:paddingTop="40dp"
-        android:paddingRight="20dp"
-
-        android:text="@string/rules_content"
-        android:textColor="@color/colorMain"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/guideline13"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
     <ImageView
         android:id="@+id/illustration1_rules"
         android:layout_width="wrap_content"
@@ -53,6 +34,59 @@
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toBottomOf="@+id/guideline8"
         tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/illustration2_rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_illustration2_rules"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toBottomOf="@+id/guideline8"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:layout_width="252dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toTopOf="@+id/illustration1_rules"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/gl_panel_start">
+
+        <TextView
+            android:id="@+id/rules_content"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/nunito"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingTop="40dp"
+            android:paddingEnd="16dp"
+            android:text="@string/rules_offline_content"
+            android:textColor="@color/colorMain"
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_button_next_rules"
+        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/gl_panel_start" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_button_back_rules"
+        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/gl_panel_start" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
