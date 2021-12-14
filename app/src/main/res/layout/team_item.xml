@@ -6,6 +6,8 @@
     android:background="@drawable/ic_bg_team_item"
     android:layout_marginBottom="5dp"
     android:padding="16dp"
+    android:elevation="4dp"
+    android:translationZ="2dp"
     app:cardUseCompatPadding="true">
 
     <LinearLayout

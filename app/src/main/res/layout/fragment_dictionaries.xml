@@ -41,6 +41,7 @@
         android:fontFamily="@font/nunito"
         android:text="@string/next_button"
         android:textColor="@color/colorMain"
+        android:textAllCaps="false"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@id/gl_panel_end"
         app:layout_constraintHorizontal_bias="0.5"
