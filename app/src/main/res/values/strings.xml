@@ -22,7 +22,7 @@
     <string name="rules_online_content">У гульні па-сетцы кожны ігрок гуляе са сваёй прылады,
         або выкарыстўоваецца адна прылада на каманду.</string>
     <string name="teams_title">Каманды</string>
-    <string name="add_team">Дабавіць каманду</string>
+    <string name="add_team">Дабавіць</string>
     <string name="delete_team">Выдаліць каманду</string>
     <string name="config_title">Налады</string>
     <string name="max_words_num_title">Колькасць словаў:</string>

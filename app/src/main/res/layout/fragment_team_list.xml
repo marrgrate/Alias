@@ -11,7 +11,7 @@
         layout="@layout/toolbar" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/panel_team_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_team_list"
@@ -30,7 +30,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/gl_left"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:layout_constraintBottom_toTopOf="@id/floatingActionButton"
+        app:layout_constraintBottom_toTopOf="@id/button_add_team"
         tools:listitem="@layout/team_item" />
 
     <Button
@@ -51,6 +51,22 @@
         app:layout_constraintRight_toRightOf="@id/gl_panel_right_team_list"
         app:layout_constraintStart_toEndOf="@id/gl_panel_left_team_list"
         app:layout_constraintTop_toTopOf="@+id/guideline15" />
+
+    <Button
+        android:id="@+id/button_add_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_button_add_team"
+        android:elevation="4dp"
+        android:fontFamily="@font/nunito"
+        android:text="@string/add_team"
+        android:textAllCaps="false"
+        android:textColor="@color/colorMain"
+        android:textSize="16sp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toStartOf="@+id/gl_right"
+        app:layout_constraintStart_toStartOf="@+id/gl_left" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_center"
@@ -114,15 +130,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.7" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:layout_constraintBottom_toTopOf="@+id/guideline15"
-        app:layout_constraintEnd_toStartOf="@+id/gl_right"
-        app:layout_constraintStart_toStartOf="@+id/gl_left"
-        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
