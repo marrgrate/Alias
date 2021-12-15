@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_background_blur"
+    android:background="@drawable/ic_background"
     android:label="@string/rules_title">
 
     <include

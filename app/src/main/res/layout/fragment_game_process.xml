@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_background_blur">
+    android:background="@drawable/ic_background">
 
     <include
         android:id="@+id/game_process_toolbar"
@@ -69,7 +69,6 @@
         android:layout_height="248dp"
         android:background="@drawable/btn_rounded_corner"
         android:elevation="4dp"
-        android:text="@string/easy_category"
         android:textAllCaps="false"
         android:textColor="@color/colorMain"
         android:textSize="32sp"
