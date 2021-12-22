@@ -1,8 +1,8 @@
 package com.example.alias.domain
 
-class DeleteTeamUseCase() {
+class DeleteTeamUseCase(private val gameRepository: GameRepository) {
 
-    fun deleteTeam() {
-
+    fun deleteTeam(team: Team) {
+        return gameRepository.deleteTeam(team)
     }
 }

@@ -1,17 +1,11 @@
 package com.example.alias.domain
 
-data class Game(
-    var teamList: List<Team>,
-    val playtime: Int,
-    var guessedWordCounter: Int,
-    var dictionary: Int
-) {
-    companion object {
-        const val DEFAULT_PLAYTIME = 60
-        const val DEFAULT_WIN_SCORE = 20
-        const val MAX_WIN_SCORE = 70
-        const val MAX_PLAYTIME = 120
-    }
+object  Game {
+    var playtime: Int = 60
+    var guessedWordCounter: Int = 0
+    var dictionary: Int = 0
+    var usedWords: List<String> = mutableListOf()
+    var winScore = 60
 }
 
 
