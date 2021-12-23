@@ -1,17 +1,38 @@
 package com.example.alias.presentation
 
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import com.example.alias.R
+
 import com.example.alias.databinding.ActivityMainBinding
+import com.example.alias.presentation.contracts.HasCustomTitle
 import com.example.alias.presentation.contracts.Navigator
+
 import com.example.alias.presentation.fragments.*
 
-private lateinit var binding: ActivityMainBinding
+
 
 class MenuActivity : AppCompatActivity(), Navigator {
+    private lateinit var binding: ActivityMainBinding
+
+    private val currentFragment: Fragment
+        get() = supportFragmentManager.findFragmentById(binding.menuContainer.id)!!
+
+    private val fragmentListener     = object : FragmentManager.FragmentLifecycleCallbacks() {
+        override fun onFragmentViewCreated(
+            fm: FragmentManager,
+            f: Fragment,
+            v: View,
+            savedInstanceState: Bundle?
+        ) {
+            super.onFragmentViewCreated(fm, f, v, savedInstanceState)
+
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
@@ -19,6 +40,13 @@ class MenuActivity : AppCompatActivity(), Navigator {
         if (savedInstanceState == null) {
             launchFragment(StartMenuFragment())
         }
+
+        supportFragmentManager.registerFragmentLifecycleCallbacks(fragmentListener, false)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        supportFragmentManager.unregisterFragmentLifecycleCallbacks(fragmentListener)
     }
 
     private fun launchFragment(fragment: Fragment) {
@@ -26,6 +54,25 @@ class MenuActivity : AppCompatActivity(), Navigator {
             .addToBackStack(null)
             .replace(binding.menuContainer.id, fragment)
             .commit()
+    }
+
+    fun updateUI() {
+        var fragment = currentFragment
+
+        if (fragment is HasCustomTitle) {
+            binding.toolbar.toolbar.title = getString(fragment.getTitleRes())
+        } else {
+            binding.toolbar.toolbar.visibility = View.GONE
+        }
+
+        if (supportFragmentManager.backStackEntryCount > 0) {
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.setDisplayShowHomeEnabled(true)
+        } else {
+            supportActionBar?.setDisplayHomeAsUpEnabled(false)
+            supportActionBar?.setDisplayShowHomeEnabled(false)
+        }
+
     }
 
     override fun goBack() {

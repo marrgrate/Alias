@@ -16,7 +16,7 @@ class ConfigFragment : Fragment(), HasCustomTitle {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding = FragmentConfigBinding.inflate(layoutInflater)
         return binding.root
