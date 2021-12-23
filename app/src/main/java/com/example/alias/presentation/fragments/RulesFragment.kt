@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.alias.R
 import com.example.alias.databinding.FragmentRulesBinding
 import com.example.alias.databinding.FragmentStartMenuBinding
 import com.example.alias.presentation.contracts.HasCustomTitle
@@ -20,7 +21,5 @@ class RulesFragment : Fragment(), HasCustomTitle {
         return binding.root
     }
 
-    override fun getTitleRes(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getTitleRes(): Int = R.string.rules_title
 }

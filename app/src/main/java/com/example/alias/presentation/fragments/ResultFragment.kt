@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.alias.R
 import com.example.alias.presentation.contracts.HasCustomTitle
 
 class ResultFragment : Fragment(), HasCustomTitle {
@@ -15,7 +16,5 @@ class ResultFragment : Fragment(), HasCustomTitle {
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 
-    override fun getTitleRes(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getTitleRes(): Int = R.string.toolbar_title_result
 }

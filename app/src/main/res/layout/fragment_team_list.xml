@@ -30,7 +30,7 @@
         tools:listitem="@layout/team_item" />
 
     <Button
-        android:id="@+id/button_next_teams"
+        android:id="@+id/button_next_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_dark_button_bg"

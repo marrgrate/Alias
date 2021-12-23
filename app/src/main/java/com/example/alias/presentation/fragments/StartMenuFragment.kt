@@ -19,7 +19,7 @@ class StartMenuFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentStartMenuBinding.inflate(layoutInflater)
         return binding.root
     }
@@ -28,14 +28,29 @@ class StartMenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[StartMenuViewModel::class.java]
 
-
         setupOnClickListeners()
     }
 
     private fun setupOnClickListeners() {
+        onExitPressed()
+        onRulesPressed()
+        onSettingsPressed()
+        onStartPressed()
+    }
+
+    private fun onStartPressed() {
         binding.buttonStart.setOnClickListener { navigator().showModeMenuScreen() }
+    }
+
+    private fun onRulesPressed() {
         binding.buttonRules.setOnClickListener { navigator().showRulesScreen() }
-        binding.buttonExit.setOnClickListener { navigator().goBack() }
+    }
+
+    private fun onSettingsPressed() {
         binding.buttonSettings.setOnClickListener { navigator().showConfigScreen() }
+    }
+
+    private fun onExitPressed() {
+        binding.buttonExit.setOnClickListener { navigator().goBack() }
     }
 }

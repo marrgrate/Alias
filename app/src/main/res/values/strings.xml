@@ -50,4 +50,5 @@
     <string name="toolbar_title_teams">Каманды</string>
     <string name="toolbar_title_configurations">Налады</string>
     <string name="toolbar_title_dictionaries">Катэгорыі</string>
+    <string name="toolbar_title_result">Вынікі</string>
 </resources>
