@@ -8,4 +8,8 @@
     android:name="com.example.alias.presentation.fragments.StartMenuFragment"
     tools:context=".presentation.MenuActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
 </androidx.fragment.app.FragmentContainerView>

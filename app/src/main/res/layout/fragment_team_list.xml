@@ -6,10 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_background">
 
-    <include
-        android:id="@+id/team_list_toolbar"
-        layout="@layout/toolbar" />
-
     <ImageView
         android:id="@+id/panel_team_list"
         android:layout_width="0dp"
