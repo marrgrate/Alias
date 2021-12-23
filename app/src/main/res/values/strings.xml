@@ -45,6 +45,8 @@
     <string name="back_to_main_menu">Пачаць зноў</string>
     <string name="create_game">Стварыць гульню</string>
     <string name="join_game">Далучыцца</string>
+    <string name="title_game_key">Ключ да гульні</string>
+    <string name="subtitle_game_key">Пакажыце ключ астатнім гульцам, каб яны маглі далучыцца</string>
     <string name="title_enter_key">Увядзіце ключ:</string>
     <string name="subtitle_enter_key">Ключ можна даведацца ў стваральніка</string>
     <string name="toolbar_title_mode">Рэжым</string>
