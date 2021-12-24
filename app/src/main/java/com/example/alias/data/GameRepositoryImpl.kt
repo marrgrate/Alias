@@ -1,5 +1,6 @@
 package com.example.alias.data
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.alias.domain.Game
@@ -11,15 +12,23 @@ object GameRepositoryImpl : GameRepository {
     private var usedWordsListLD = MutableLiveData<List<String>>()
     private var teamList = mutableListOf<Team>()
     private var teamListLD = MutableLiveData<List<Team>>()
+    private var dictionaries = mutableListOf<String>()
+
+    init {
+        for (i in 0..2) {
+            val team = Team("Team$i", 0)
+            addTeam(team)
+        }
+    }
 
     private val game: Game = Game
 
     override fun addTeam(team: Team) {
-        if (teamList.map { it.name }.contains(team.name)) {
-            teamList.add(team)
-        }
+        teamList.add(team)
 
         updateTeamList()
+
+        Log.i("TEAM_COUNT", getTeamList().value?.size.toString())
     }
 
     override fun deleteTeam(team: Team) {
@@ -64,6 +73,10 @@ object GameRepositoryImpl : GameRepository {
         return usedWordsListLD
     }
 
+    override fun getDictionaries(): List<String> {
+        TODO("Not yet implemented")
+    }
+
     override fun closeGame() {
         game.guessedWordCounter = 0
         usedWordsList.clear()
@@ -79,6 +92,4 @@ object GameRepositoryImpl : GameRepository {
     private fun updateUsedWordsList() {
         usedWordsListLD.value = usedWordsList.toList()
     }
-
-
 }

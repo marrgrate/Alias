@@ -41,6 +41,7 @@ class MenuActivity : AppCompatActivity(), Navigator {
             launchFragment(StartMenuFragment())
         }
 
+
         supportFragmentManager.registerFragmentLifecycleCallbacks(fragmentListener, false)
     }
 
@@ -54,9 +55,11 @@ class MenuActivity : AppCompatActivity(), Navigator {
             .addToBackStack(null)
             .replace(binding.menuContainer.id, fragment)
             .commit()
+
+        updateUI()
     }
 
-    fun updateUI() {
+    private fun updateUI() {
         var fragment = currentFragment
 
         if (fragment is HasCustomTitle) {

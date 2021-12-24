@@ -24,4 +24,6 @@ interface GameRepository {
     fun closeGame()
 
     fun getUsedWordsList() : LiveData<List<String>>
+
+    fun getDictionaries() : List<String>
 }

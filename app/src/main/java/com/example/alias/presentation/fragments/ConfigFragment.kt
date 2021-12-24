@@ -31,7 +31,7 @@ class ConfigFragment : Fragment(), HasCustomTitle {
 
     override fun getTitleRes(): Int = R.string.config_title
 
-    fun onConfirmConfigPressed() {
+    private fun onConfirmConfigPressed() {
         binding.buttonConfirmConfig.setOnClickListener { navigator().showDictionariesScreen() }
     }
 }
