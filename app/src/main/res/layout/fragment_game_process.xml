@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_background">
@@ -25,6 +24,7 @@
         android:paddingTop="30dp"
         android:text="@string/team_plays"
         android:textColor="@color/colorMain"
+        android:fontFamily="@font/nunito"
         android:textSize="21sp"
         app:layout_constraintBottom_toTopOf="@+id/team_name"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
@@ -40,6 +40,7 @@
         android:clickable="false"
         android:textColor="@color/colorMain"
         android:textSize="21sp"
+        android:fontFamily="@font/nunito"
         app:layout_constraintBottom_toTopOf="@+id/timer"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintHorizontal_bias="0.5"
@@ -51,6 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorMain"
+        android:fontFamily="@font/nunito"
         android:textSize="21sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
@@ -59,67 +61,80 @@
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toBottomOf="@+id/team_name" />
 
-    <Button
-        android:id="@+id/start_game"
-        android:layout_width="197dp"
-        android:layout_height="248dp"
-        android:background="@drawable/btn_rounded_corner"
-        android:elevation="4dp"
-        android:textAllCaps="false"
-        android:textColor="@color/colorMain"
-        android:textSize="32sp"
-        android:translationZ="2dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline13"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toTopOf="@+id/guideline9" />
-
     <TextView
         android:id="@+id/word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textColor="@color/colorMain"
         android:fontFamily="@font/nunito"
-
-        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_mode"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toBottomOf="@+id/timer" />
 
     <ImageView
-        android:id="@+id/button2"
+        android:id="@+id/illustration_start_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_illustration_start_game"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/button_start_game"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/team_name" />
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
 
-    <Button
-        android:id="@+id/imageButton"
+    <ImageButton
+        android:id="@+id/image_button_word_accept"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/start_button"
-        android:textAllCaps="false"
-        android:textColor="@color/colorMain"
-        android:textSize="24sp"
+        android:background="@drawable/ic_word_accept"
         android:elevation="4dp"
         android:translationZ="2dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_mode"
+        app:layout_constraintEnd_toStartOf="@+id/gl_panel_right_mode"
+        app:layout_constraintStart_toEndOf="@+id/image_button_word_skip"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <ImageButton
+        android:id="@+id/image_button_word_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_word_skip"
+        android:elevation="4dp"
+        android:translationZ="2dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_mode"
+        app:layout_constraintEnd_toStartOf="@+id/image_button_word_accept"
+        app:layout_constraintStart_toStartOf="@+id/gl_panel_left_mode"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <Button
+        android:id="@+id/button_start_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/ic_dark_button_bg"
+        android:elevation="4dp"
+        android:text="@string/start_button"
+        android:textAllCaps="false"
+        android:fontFamily="@font/nunito"
+        android:textColor="@color/colorMain"
+        android:textSize="24sp"
+        android:translationZ="2dp"
         app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_mode"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_right_mode"
@@ -175,6 +190,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="565dp" />
+        app:layout_constraintGuide_percent="0.7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
