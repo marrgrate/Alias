@@ -11,6 +11,7 @@ import com.example.alias.R
 import com.example.alias.databinding.FragmentDictionariesBinding
 import com.example.alias.presentation.adapters.DictionariesAdapter
 import com.example.alias.presentation.contracts.HasCustomTitle
+import com.example.alias.presentation.contracts.navigator
 import com.example.alias.presentation.viewmodels.DictionariesViewModel
 
 class DictionariesFragment : Fragment(), HasCustomTitle {
@@ -32,6 +33,7 @@ class DictionariesFragment : Fragment(), HasCustomTitle {
         viewModel = ViewModelProvider(this)[DictionariesViewModel::class.java]
 
         setupRecyclerView()
+        onNextPressed()
     }
 
     override fun getTitleRes(): Int = R.string.dictionaries_title
@@ -42,5 +44,9 @@ class DictionariesFragment : Fragment(), HasCustomTitle {
             adapter = dictionariesAdapter
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         }
+    }
+
+    fun onNextPressed() {
+        binding.buttonNextDictionaries.setOnClickListener { navigator().showPauseGameProcessFragment() }
     }
 }

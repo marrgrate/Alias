@@ -9,7 +9,7 @@ class ConfigViewModel : ViewModel() {
         Game.winScore = score
     }
 
-    fun setPlaytime(time: Int) {
+    fun setPlaytime(time: Long) {
         Game.playtime = time
     }
 }

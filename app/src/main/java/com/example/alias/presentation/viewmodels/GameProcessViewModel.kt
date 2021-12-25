@@ -1,24 +1,53 @@
 package com.example.alias.presentation.viewmodels
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import com.example.alias.data.GameRepositoryImpl
-import com.example.alias.domain.AddTeamUseCase
-import com.example.alias.domain.GuessWordUseCase
-import com.example.alias.domain.SkipWordUseCase
-import com.example.alias.domain.Team
+import com.example.alias.domain.*
+import kotlin.random.Random
+
 
 class GameProcessViewModel : ViewModel() {
     private var repository = GameRepositoryImpl
 
     private val skipWordUseCase = SkipWordUseCase(repository)
     private val guessWordUseCase = GuessWordUseCase(repository)
+    private val parseWordUseCase = ParseWordsUseCase(repository)
+    private val getWordsUseCase = GetWordsUseCase(repository)
+    private val getTeamListUseCase = GetTeamListUseCase(repository)
+    private val getGetUsedWordsListUseCase = GetUsedWordsListUseCase(repository)
+
+    var counter = 0
+    val winScore = Game.winScore
+    private val words = getWordsUseCase.getWords()
+    private val teams = getTeamListUseCase.getTeamList()
+    val gameTime = Game.playtime
+    val currentTeam: Team = nextTeam()
+
+
+    fun parseWords(context: Context) {
+        parseWordUseCase.parseWords(context)
+    }
 
     fun skipWord(word: String) {
         skipWordUseCase.skipWord(word)
     }
 
     fun guessWord(word: String) {
-        guessWordUseCase.guessWord(word)
+        guessWordUseCase.guessWord(word, currentTeam)
+    }
+
+    fun nextWord(): String {
+        return words[Random.nextInt(0, words.size)]
+    }
+
+    private fun nextTeam(): Team {
+        return if (counter < teams.value!!.size) {
+            teams.value!![counter]
+        } else {
+            counter = 0
+            teams.value!![counter]
+        }
     }
 
 }

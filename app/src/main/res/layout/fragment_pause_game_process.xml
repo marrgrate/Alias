@@ -21,86 +21,57 @@
         android:id="@+id/text_view_team_plays_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="30dp"
-        android:text="@string/team_plays"
-        android:textColor="@color/colorMain"
         android:fontFamily="@font/nunito"
+        android:paddingTop="30dp"
+        android:text="@string/next_team"
+        android:textColor="@color/colorMain"
         android:textSize="21sp"
-        app:layout_constraintBottom_toTopOf="@+id/team_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toTopOf="@+id/bg_panel_game" />
 
-    <Button
-        android:id="@+id/team_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_team_name_frame"
-        android:clickable="false"
-        android:textColor="@color/colorMain"
-        android:textSize="21sp"
-        android:fontFamily="@font/nunito"
-        app:layout_constraintBottom_toTopOf="@+id/timer"
-        app:layout_constraintEnd_toStartOf="@+id/guideline13"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_team_plays_title" />
-
-    <TextView
-        android:id="@+id/timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorMain"
-        android:fontFamily="@font/nunito"
-        android:textSize="21sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline9"
-        app:layout_constraintEnd_toStartOf="@+id/guideline13"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/team_name" />
-
     <TextView
         android:id="@+id/word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
         android:textAllCaps="false"
         android:textColor="@color/colorMain"
-        android:fontFamily="@font/nunito"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/guideline14" />
+
+    <ImageView
+        android:id="@+id/illustration_start_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_illustration_start_game"
+        app:layout_constraintBottom_toTopOf="@+id/button_start_game"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/timer" />
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
-    <ImageButton
-        android:id="@+id/image_button_word_accept"
+    <Button
+        android:id="@+id/button_start_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_word_accept"
+        android:background="@drawable/ic_dark_button_bg"
         android:elevation="4dp"
+        android:text="@string/start_button"
+        android:textAllCaps="false"
+        android:fontFamily="@font/nunito"
+        android:textColor="@color/colorMain"
+        android:textSize="24sp"
         android:translationZ="2dp"
-        android:clickable="true"
-        android:focusable="true"
         app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_mode"
-        app:layout_constraintEnd_toStartOf="@+id/gl_panel_right_mode"
-        app:layout_constraintStart_toEndOf="@+id/image_button_word_skip"
-        app:layout_constraintTop_toTopOf="@+id/guideline8" />
-
-    <ImageButton
-        android:id="@+id/image_button_word_skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_word_skip"
-        android:elevation="4dp"
-        android:translationZ="2dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_mode"
-        app:layout_constraintEnd_toStartOf="@+id/image_button_word_accept"
-        app:layout_constraintStart_toStartOf="@+id/gl_panel_left_mode"
-        app:layout_constraintTop_toTopOf="@+id/guideline8"/>
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
@@ -156,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.3" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"

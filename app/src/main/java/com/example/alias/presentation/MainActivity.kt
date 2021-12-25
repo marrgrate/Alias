@@ -138,4 +138,8 @@ class MenuActivity : AppCompatActivity(), Navigator {
         launchFragment(GameKeyFragment())
 
     }
+
+    override fun showPauseGameProcessFragment() {
+        launchFragment(PauseGameProcessFragment())
+    }
 }

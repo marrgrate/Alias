@@ -1,6 +1,6 @@
 package com.example.alias.data
 
-import android.app.Application
+
 import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -8,13 +8,10 @@ import androidx.lifecycle.MutableLiveData
 import com.example.alias.domain.Game
 import com.example.alias.domain.GameRepository
 import com.example.alias.domain.Team
-import com.google.gson.JsonArray
-import com.google.gson.JsonObject
-import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
-import java.io.InputStream
-import java.lang.RuntimeException
+
+
 
 object GameRepositoryImpl : GameRepository {
     private var usedWordsList = mutableListOf<String>()
@@ -22,9 +19,10 @@ object GameRepositoryImpl : GameRepository {
     private var teamList = mutableListOf<Team>()
     private var teamListLD = MutableLiveData<List<Team>>()
     private var dictionaries = mutableListOf<String>()
+    private var gameWords = mutableListOf<String>()
 
     init {
-        for (i in 0..2) {
+        for (i in 0..1) {
             val team = Team("Team$i", 0)
             addTeam(team)
         }
@@ -62,8 +60,8 @@ object GameRepositoryImpl : GameRepository {
         TODO("Not yet implemented")
     }
 
-    override fun guessWord(word: String) {
-        game.guessedWordCounter++
+    override fun guessWord(word: String, team: Team) {
+        team.result++
 
         usedWordsList.add(word)
         updateUsedWordsList()
@@ -91,13 +89,17 @@ object GameRepositoryImpl : GameRepository {
 
         try {
             val listFileNames = manager.list("dictionaries")
+
             if (listFileNames != null) {
                 for (file in listFileNames) {
-                    val inputStream: InputStream = manager.open("dictionaries/$file")
-                    var jsonString = inputStream.bufferedReader()
+                    val jsonString: String = manager
+                        .open("dictionaries/$file")
+                        .bufferedReader()
                         .use { it.readText() }
+
                     val jsonDictionary = JSONObject(jsonString)
-                    var dictionaryName = jsonDictionary.getString("name")
+                    val dictionaryName = jsonDictionary.getString("name")
+
                     dictionaries.add(dictionaryName)
                 }
             }
@@ -105,6 +107,34 @@ object GameRepositoryImpl : GameRepository {
         } catch (e: IOException) {
             throw e
         }
+    }
+
+    override fun parseWords(context: Context) {
+        val manager = context.assets
+
+        try {
+            val listFileNames = manager.list("dictionaries")
+
+            if (listFileNames != null) {
+                val jsonString = manager
+                    .open("dictionaries/${listFileNames[game.dictionary]}")
+                    .bufferedReader()
+                    .use { it.readText() }
+
+                val jsonDictionary = JSONObject(jsonString)
+                val jsonArray = jsonDictionary.getJSONArray("words")
+
+                for (i: Int in 0 until jsonArray.length()) {
+                    gameWords.add(jsonArray.getString(i))
+                }
+            }
+        } catch (e: IOException) {
+            throw e
+        }
+    }
+
+    override fun getWords(): List<String> {
+        return gameWords
     }
 
     override fun closeGame() {

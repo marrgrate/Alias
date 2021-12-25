@@ -1,11 +1,11 @@
 package com.example.alias.domain
 
 object  Game {
-    var playtime: Int = 60
+    var playtime: Long = 60000               //ms
     var guessedWordCounter: Int = 0
     var dictionary: Int = 0
     var usedWords: List<String> = mutableListOf()
-    var winScore = 60
+    var winScore = 5
 }
 
 

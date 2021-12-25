@@ -34,6 +34,5 @@ interface Navigator {
 
     fun showGameKeyFragment()
 
-
-
+    fun showPauseGameProcessFragment()
 }

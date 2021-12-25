@@ -14,7 +14,7 @@ interface GameRepository {
 
     fun createGame()
 
-    fun guessWord(word: String)
+    fun guessWord(word: String, team: Team)
 
     fun skipWord(word: String)
 
@@ -29,4 +29,8 @@ interface GameRepository {
     fun getDictionaries() : List<String>
 
     suspend fun parseDictionariesName(context: Context)
+
+    fun parseWords(context: Context)
+
+    fun getWords() : List<String>
 }
