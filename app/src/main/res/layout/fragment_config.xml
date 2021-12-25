@@ -25,6 +25,7 @@
         android:text="@string/max_words_num_title"
         android:textColor="@color/colorMain"
         android:textSize="20sp"
+        android:fontFamily="@font/nunito"
         app:layout_constraintBottom_toTopOf="@+id/seekbar_words"
         app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
@@ -48,6 +49,7 @@
         android:text="@string/time_config_title"
         android:textColor="@color/colorMain"
         android:textSize="20sp"
+        android:fontFamily="@font/nunito"
         app:layout_constraintBottom_toTopOf="@+id/seekbar_time"
         app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"
         app:layout_constraintTop_toBottomOf="@+id/seekbar_words" />
@@ -65,25 +67,29 @@
         app:layout_constraintTop_toBottomOf="@+id/text_view_time" />
 
     <TextView
-        android:id="@+id/text_view_cur_words_num"
+        android:id="@+id/text_view_win_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorMain"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/seekbar_words"
         app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
+        app:layout_constraintHorizontal_bias="0.808"
         app:layout_constraintStart_toEndOf="@+id/text_view_max_words_num"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <TextView
-        android:id="@+id/text_view_cur_time"
+        android:id="@+id/text_view_playtime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textColor="@color/colorMain"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/seekbar_time"
         app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toEndOf="@+id/text_view_time"
-        app:layout_constraintTop_toBottomOf="@id/seekbar_words" />
+        app:layout_constraintTop_toBottomOf="@id/seekbar_words"
+        app:layout_constraintVertical_bias="0.511" />
 
     <Button
         android:id="@+id/button_confirm_config"
