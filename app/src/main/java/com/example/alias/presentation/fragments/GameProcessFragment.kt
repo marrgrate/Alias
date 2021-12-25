@@ -70,9 +70,8 @@ class GameProcessFragment : Fragment() {
     private fun runTimer() {
         object : CountDownTimer(viewModel.gameTime, 1000){
             override fun onTick(p0: Long) {
-                val counter = (viewModel.gameTime / 1000) - 1
 
-                binding.timer.text = counter.toString()
+                binding.timer.text = (p0 / 1000).toString()
             }
 
             override fun onFinish() {

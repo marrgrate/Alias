@@ -54,7 +54,6 @@
         android:textColor="@color/colorMain"
         android:fontFamily="@font/nunito"
         android:textSize="21sp"
-        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintHorizontal_bias="0.5"

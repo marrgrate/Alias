@@ -46,7 +46,7 @@ class DictionariesFragment : Fragment(), HasCustomTitle {
         }
     }
 
-    fun onNextPressed() {
+    private fun onNextPressed() {
         binding.buttonNextDictionaries.setOnClickListener { navigator().showPauseGameProcessFragment() }
     }
 }
