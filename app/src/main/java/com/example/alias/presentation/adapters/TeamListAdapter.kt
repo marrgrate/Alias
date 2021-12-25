@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alias.R
 import com.example.alias.domain.Team
-import com.example.alias.presentation.TeamDiffCallback
+import com.example.alias.presentation.adapters.callbacks.TeamDiffCallback
 
 
 class TeamListAdapter : ListAdapter<Team, TeamListAdapter.TeamViewHolder>(TeamDiffCallback()) {

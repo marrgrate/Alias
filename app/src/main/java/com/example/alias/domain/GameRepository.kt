@@ -1,5 +1,6 @@
 package com.example.alias.domain
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 
 interface GameRepository {
@@ -26,4 +27,6 @@ interface GameRepository {
     fun getUsedWordsList() : LiveData<List<String>>
 
     fun getDictionaries() : List<String>
+
+    suspend fun parseDictionariesName(context: Context)
 }

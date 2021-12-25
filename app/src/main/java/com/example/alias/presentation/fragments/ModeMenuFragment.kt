@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.alias.R
 import com.example.alias.databinding.FragmentModeMenuBinding
-import com.example.alias.databinding.FragmentStartMenuBinding
 import com.example.alias.presentation.contracts.HasCustomTitle
 import com.example.alias.presentation.contracts.navigator
 
@@ -16,7 +15,7 @@ class ModeMenuFragment : Fragment(), HasCustomTitle {
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View {
 
         binding = FragmentModeMenuBinding.inflate(layoutInflater)
         return binding.root
@@ -35,11 +34,11 @@ class ModeMenuFragment : Fragment(), HasCustomTitle {
         onOnlineModePressed()
     }
 
-    fun onOfflineModePressed() {
+    private fun onOfflineModePressed() {
         binding.buttonOffline.setOnClickListener { navigator().showTeamListScreen() }
     }
 
-    fun onOnlineModePressed() {
-        binding.buttonNetwork.setOnClickListener { navigator().showOnlineOptionScreen() }
+    private fun onOnlineModePressed() {
+        binding.buttonNetwork.setOnClickListener { navigator().showOnlineModeScreen() }
     }
 }

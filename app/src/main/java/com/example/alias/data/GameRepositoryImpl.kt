@@ -1,11 +1,20 @@
 package com.example.alias.data
 
+import android.app.Application
+import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.alias.domain.Game
 import com.example.alias.domain.GameRepository
 import com.example.alias.domain.Team
+import com.google.gson.JsonArray
+import com.google.gson.JsonObject
+import org.json.JSONArray
+import org.json.JSONObject
+import java.io.IOException
+import java.io.InputStream
+import java.lang.RuntimeException
 
 object GameRepositoryImpl : GameRepository {
     private var usedWordsList = mutableListOf<String>()
@@ -74,7 +83,28 @@ object GameRepositoryImpl : GameRepository {
     }
 
     override fun getDictionaries(): List<String> {
-        TODO("Not yet implemented")
+        return dictionaries
+    }
+
+    override suspend fun parseDictionariesName(context: Context) {
+        val manager = context.assets
+
+        try {
+            val listFileNames = manager.list("dictionaries")
+            if (listFileNames != null) {
+                for (file in listFileNames) {
+                    val inputStream: InputStream = manager.open("dictionaries/$file")
+                    var jsonString = inputStream.bufferedReader()
+                        .use { it.readText() }
+                    val jsonDictionary = JSONObject(jsonString)
+                    var dictionaryName = jsonDictionary.getString("name")
+                    dictionaries.add(dictionaryName)
+                }
+            }
+
+        } catch (e: IOException) {
+            throw e
+        }
     }
 
     override fun closeGame() {

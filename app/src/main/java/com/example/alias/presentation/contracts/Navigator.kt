@@ -16,7 +16,7 @@ interface Navigator {
 
     fun showModeMenuScreen()
 
-    fun showOnlineOptionScreen()
+    fun showOnlineModeScreen()
 
     fun showTeamListScreen()
 
@@ -31,6 +31,8 @@ interface Navigator {
     fun showGameFinishScreen()
 
     fun showResultScreen()
+
+    fun showGameKeyFragment()
 
 
 

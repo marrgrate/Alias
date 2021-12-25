@@ -1,4 +1,4 @@
-package com.example.alias.presentation
+package com.example.alias.presentation.adapters.callbacks
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.alias.domain.Team

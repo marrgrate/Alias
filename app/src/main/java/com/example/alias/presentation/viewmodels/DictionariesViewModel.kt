@@ -8,4 +8,6 @@ class DictionariesViewModel : ViewModel() {
     private var repository = GameRepositoryImpl
 
     private val getDictionariesUseCase = GetDictionariesUseCase(repository)
+
+    val dictionaries = getDictionariesUseCase.getDictionaries()
 }
