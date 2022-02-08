@@ -5,18 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.alias.databinding.FragmentDictionariesBinding
 import com.example.alias.databinding.FragmentGameFinishBinding
 import com.example.alias.presentation.contracts.navigator
+import java.lang.RuntimeException
 
 class GameFinishFragment : Fragment() {
-    private lateinit var binding: FragmentGameFinishBinding
+    private var _binding: FragmentGameFinishBinding? = null
+    private val binding: FragmentGameFinishBinding
+        get() = _binding ?: throw RuntimeException("FragmentDictionariesBinding == null!")
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentGameFinishBinding.inflate(layoutInflater)
+        _binding = FragmentGameFinishBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -24,6 +28,12 @@ class GameFinishFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         onAgainPressed()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        _binding = null
     }
 
     private fun onAgainPressed() {

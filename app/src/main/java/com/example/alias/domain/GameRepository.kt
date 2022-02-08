@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 
 interface GameRepository {
+    
     fun addTeam(team: Team)
 
     fun deleteTeam(team: Team)

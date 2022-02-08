@@ -11,8 +11,6 @@ import com.example.alias.domain.Team
 import org.json.JSONObject
 import java.io.IOException
 
-
-
 object GameRepositoryImpl : GameRepository {
     private var usedWordsList = mutableListOf<String>()
     private var usedWordsListLD = MutableLiveData<List<String>>()

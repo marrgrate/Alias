@@ -6,18 +6,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.alias.R
+import com.example.alias.databinding.FragmentGameProcessBinding
 import com.example.alias.databinding.FragmentModeMenuBinding
 import com.example.alias.presentation.contracts.HasCustomTitle
 import com.example.alias.presentation.contracts.navigator
+import java.lang.RuntimeException
 
 class ModeMenuFragment : Fragment(), HasCustomTitle {
-    private lateinit var binding: FragmentModeMenuBinding
+    private var _binding: FragmentModeMenuBinding? = null
+    private val binding: FragmentModeMenuBinding
+        get() = _binding ?: throw RuntimeException("FragmentModeMenuBinding == null!")
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
 
-        binding = FragmentModeMenuBinding.inflate(layoutInflater)
+        _binding = FragmentModeMenuBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -25,6 +29,12 @@ class ModeMenuFragment : Fragment(), HasCustomTitle {
         super.onViewCreated(view, savedInstanceState)
 
         setupOnClickListeners()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        _binding = null
     }
 
     override fun getTitleRes(): Int = R.string.mode_title

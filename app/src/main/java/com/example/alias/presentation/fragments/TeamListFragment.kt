@@ -10,24 +10,30 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alias.R
+import com.example.alias.databinding.FragmentStartMenuBinding
 import com.example.alias.databinding.FragmentTeamListBinding
 import com.example.alias.domain.Team
 import com.example.alias.presentation.adapters.TeamListAdapter
 import com.example.alias.presentation.contracts.HasCustomTitle
 import com.example.alias.presentation.contracts.navigator
 import com.example.alias.presentation.viewmodels.TeamListViewModel
+import java.lang.RuntimeException
 
 class TeamListFragment : Fragment(), HasCustomTitle {
-    private lateinit var binding: FragmentTeamListBinding
+    private var _binding: FragmentTeamListBinding? = null
+    private val binding: FragmentTeamListBinding
+        get() = _binding ?: throw RuntimeException("FragmentTeamListBinding == null!")
     private lateinit var teamListAdapter: TeamListAdapter
     private lateinit var viewModel : TeamListViewModel
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentTeamListBinding.inflate(layoutInflater)
+        _binding = FragmentTeamListBinding.inflate(layoutInflater)
 
         return binding.root
     }
@@ -38,10 +44,16 @@ class TeamListFragment : Fragment(), HasCustomTitle {
         setupRecyclerView()
 
         viewModel = ViewModelProvider(this)[TeamListViewModel::class.java]
-        viewModel.teamList.observe(this) { teamListAdapter.submitList(it) }
+        viewModel.teamList.observe(viewLifecycleOwner) { teamListAdapter.submitList(it) }
 
         setupOnSwipeListener()
         setupOnClickListeners()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        _binding = null
     }
 
     override fun getTitleRes(): Int = R.string.teams_title

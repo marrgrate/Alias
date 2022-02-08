@@ -2,32 +2,28 @@ package com.example.alias.presentation.fragments
 
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.alias.R
 import com.example.alias.databinding.FragmentGameProcessBinding
-import com.example.alias.domain.Team
 import com.example.alias.presentation.contracts.navigator
 import com.example.alias.presentation.viewmodels.GameProcessViewModel
+import java.lang.RuntimeException
 
 class GameProcessFragment : Fragment() {
-    private lateinit var binding: FragmentGameProcessBinding
     private lateinit var viewModel: GameProcessViewModel
+    private var _binding: FragmentGameProcessBinding? = null
+    private val binding: FragmentGameProcessBinding
+        get() = _binding ?: throw RuntimeException("FragmentGameProcessBinding == null!")
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentGameProcessBinding.inflate(layoutInflater)
+        _binding = FragmentGameProcessBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -35,16 +31,20 @@ class GameProcessFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProvider(this)[GameProcessViewModel::class.java]
-        viewModel.parseWords(context!!)
+        viewModel.parseWords(requireContext())
 
         binding.teamName.text = viewModel.currentTeam.name
         binding.word.text = viewModel.nextWord()
-
 
         runTimer()
         setupOnClickListeners()
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        _binding = null
+    }
 
     private fun onSkipWordPressed() {
         binding.imageButtonWordSkip.setOnClickListener {

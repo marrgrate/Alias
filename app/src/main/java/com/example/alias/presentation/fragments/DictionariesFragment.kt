@@ -8,23 +8,27 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.alias.R
+import com.example.alias.databinding.FragmentConfigBinding
 import com.example.alias.databinding.FragmentDictionariesBinding
 import com.example.alias.presentation.adapters.DictionariesAdapter
 import com.example.alias.presentation.contracts.HasCustomTitle
 import com.example.alias.presentation.contracts.navigator
 import com.example.alias.presentation.viewmodels.DictionariesViewModel
+import java.lang.RuntimeException
 
 class DictionariesFragment : Fragment(), HasCustomTitle {
-    private lateinit var binding: FragmentDictionariesBinding
     private lateinit var viewModel: DictionariesViewModel
     private lateinit var dictionariesAdapter: DictionariesAdapter
+    private var _binding: FragmentDictionariesBinding? = null
+    private val binding: FragmentDictionariesBinding
+        get() = _binding ?: throw RuntimeException("FragmentDictionariesBinding == null!")
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDictionariesBinding.inflate(layoutInflater)
+        _binding = FragmentDictionariesBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -34,6 +38,12 @@ class DictionariesFragment : Fragment(), HasCustomTitle {
 
         setupRecyclerView()
         onNextPressed()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        _binding = null
     }
 
     override fun getTitleRes(): Int = R.string.dictionaries_title

@@ -14,11 +14,13 @@ import com.example.alias.databinding.FragmentConfigBinding
 import com.example.alias.presentation.contracts.HasCustomTitle
 import com.example.alias.presentation.contracts.navigator
 import com.example.alias.presentation.viewmodels.ConfigViewModel
+import java.lang.RuntimeException
 
 class ConfigFragment : Fragment(), HasCustomTitle {
-    private lateinit var binding: FragmentConfigBinding
     private lateinit var viewModel : ConfigViewModel
-
+    private var _binding: FragmentConfigBinding? = null
+    private val binding: FragmentConfigBinding
+        get() = _binding ?: throw RuntimeException("FragmentConfigBinding == null!")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +28,7 @@ class ConfigFragment : Fragment(), HasCustomTitle {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = FragmentConfigBinding.inflate(layoutInflater)
+        _binding = FragmentConfigBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -53,6 +55,12 @@ class ConfigFragment : Fragment(), HasCustomTitle {
         val textViewPlaytime = view.findViewById<TextView>(R.id.text_view_playtime)
         textViewPlaytime.text = seekBarTime.progress.toString()
         seekBarChangeListener(seekBarTime, textViewPlaytime)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        _binding = null
     }
 
     override fun getTitleRes(): Int = R.string.config_title
