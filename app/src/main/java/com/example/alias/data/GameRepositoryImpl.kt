@@ -5,9 +5,9 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.alias.domain.Game
-import com.example.alias.domain.GameRepository
-import com.example.alias.domain.Team
+import com.example.alias.domain.entities.Game
+import com.example.alias.domain.repository.GameRepository
+import com.example.alias.domain.entities.Team
 import org.json.JSONObject
 import java.io.IOException
 

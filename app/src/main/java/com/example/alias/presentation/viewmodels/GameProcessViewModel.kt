@@ -3,7 +3,9 @@ package com.example.alias.presentation.viewmodels
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import com.example.alias.data.GameRepositoryImpl
-import com.example.alias.domain.*
+import com.example.alias.domain.entities.Game
+import com.example.alias.domain.entities.Team
+import com.example.alias.domain.usecases.*
 import kotlin.random.Random
 
 

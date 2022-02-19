@@ -7,14 +7,16 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/menu_container"
-        android:name="com.example.alias.presentation.fragments.StartMenuFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/main_navigation"
+        app:defaultNavHost="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:context=".presentation.MenuActivity" />
+        tools:context=".presentation.MainActivity" />
 
     <include
         android:id="@+id/toolbar"

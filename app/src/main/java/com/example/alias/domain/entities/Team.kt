@@ -1,4 +1,4 @@
-package com.example.alias.domain
+package com.example.alias.domain.entities
 
 data class Team(
     val name: String,

@@ -1,6 +1,7 @@
-package com.example.alias.domain
+package com.example.alias.domain.usecases
 
 import androidx.lifecycle.LiveData
+import com.example.alias.domain.repository.GameRepository
 
 class GetUsedWordsListUseCase(private val gameRepository: GameRepository) {
 

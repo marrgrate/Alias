@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/startMenuFragment">
+
+    <fragment
+        android:id="@+id/startMenuFragment"
+        android:name="com.example.alias.presentation.fragments.StartMenuFragment"
+        android:label="fragment_start_menu"
+        tools:layout="@layout/fragment_start_menu" >
+        <action
+            android:id="@+id/action_startMenuFragment_to_modeMenuFragment"
+            app:destination="@id/modeMenuFragment" />
+        <action
+            android:id="@+id/action_startMenuFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modeMenuFragment"
+        android:name="com.example.alias.presentation.fragments.ModeMenuFragment"
+        android:label="ModeMenuFragment" >
+        <action
+            android:id="@+id/action_modeMenuFragment_to_onlineModeFragment"
+            app:destination="@id/onlineModeFragment" />
+        <action
+            android:id="@+id/action_modeMenuFragment_to_teamListFragment"
+            app:destination="@id/teamListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onlineModeFragment"
+        android:name="com.example.alias.presentation.fragments.OnlineModeFragment"
+        android:label="OnlineModeFragment" >
+        <action
+            android:id="@+id/action_onlineModeFragment_to_gameKeyFragment"
+            app:destination="@id/gameKeyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamListFragment"
+        android:name="com.example.alias.presentation.fragments.TeamListFragment"
+        android:label="TeamListFragment" >
+        <action
+            android:id="@+id/action_teamListFragment_to_configFragment2"
+            app:destination="@id/configFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/configFragment2"
+        android:name="com.example.alias.presentation.fragments.ConfigFragment"
+        android:label="ConfigFragment" >
+        <action
+            android:id="@+id/action_configFragment2_to_dictionariesFragment2"
+            app:destination="@id/dictionariesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/dictionariesFragment2"
+        android:name="com.example.alias.presentation.fragments.DictionariesFragment"
+        android:label="DictionariesFragment" >
+        <action
+            android:id="@+id/action_dictionariesFragment2_to_gameProcessFragment"
+            app:destination="@id/gameProcessFragment" />
+        <action
+            android:id="@+id/action_dictionariesFragment2_to_pauseGameProcessFragment"
+            app:destination="@id/pauseGameProcessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameKeyFragment"
+        android:name="com.example.alias.presentation.fragments.GameKeyFragment"
+        android:label="GameKeyFragment" >
+        <action
+            android:id="@+id/action_gameKeyFragment_to_joinTeamListFragment"
+            app:destination="@id/joinTeamListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.alias.presentation.fragments.RulesFragment"
+        android:label="RulesFragment" />
+    <fragment
+        android:id="@+id/gameProcessFragment"
+        android:name="com.example.alias.presentation.fragments.GameProcessFragment"
+        android:label="GameProcessFragment" >
+        <action
+            android:id="@+id/action_gameProcessFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_gameProcessFragment_to_pauseGameProcessFragment"
+            app:destination="@id/pauseGameProcessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFinishFragment"
+        android:name="com.example.alias.presentation.fragments.GameFinishFragment"
+        android:label="GameFinishFragment" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.alias.presentation.fragments.ResultFragment"
+        android:label="ResultFragment" >
+        <action
+            android:id="@+id/action_resultFragment_to_gameFinishFragment"
+            app:destination="@id/gameFinishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pauseGameProcessFragment"
+        android:name="com.example.alias.presentation.fragments.PauseGameProcessFragment"
+        android:label="PauseGameProcessFragment" />
+    <fragment
+        android:id="@+id/joinTeamListFragment"
+        android:name="com.example.alias.presentation.fragments.JoinTeamListFragment"
+        android:label="fragment_join_team_list"
+        tools:layout="@layout/fragment_join_team_list" />
+</navigation>

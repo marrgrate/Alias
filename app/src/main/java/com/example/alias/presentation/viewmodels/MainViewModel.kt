@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 
 import com.example.alias.data.GameRepositoryImpl
 
-import com.example.alias.domain.ParseDictionariesNameUseCase
+import com.example.alias.domain.usecases.ParseDictionariesNameUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch

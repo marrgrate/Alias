@@ -10,9 +10,8 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alias.R
-import com.example.alias.databinding.FragmentStartMenuBinding
 import com.example.alias.databinding.FragmentTeamListBinding
-import com.example.alias.domain.Team
+import com.example.alias.domain.entities.Team
 import com.example.alias.presentation.adapters.TeamListAdapter
 import com.example.alias.presentation.contracts.HasCustomTitle
 import com.example.alias.presentation.contracts.navigator

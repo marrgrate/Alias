@@ -56,4 +56,6 @@
     <string name="toolbar_title_dictionaries">Катэгорыі</string>
     <string name="toolbar_title_result">Вынікі</string>
     <string name="next_team">Наступная каманда!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

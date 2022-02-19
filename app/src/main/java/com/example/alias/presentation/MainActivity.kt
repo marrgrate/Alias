@@ -2,23 +2,19 @@ package com.example.alias.presentation
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-
 import com.example.alias.databinding.ActivityMainBinding
 import com.example.alias.presentation.contracts.HasCustomTitle
 import com.example.alias.presentation.contracts.Navigator
 import com.example.alias.presentation.fragments.*
 import com.example.alias.presentation.viewmodels.MainViewModel
-import kotlinx.coroutines.coroutineScope
 
 
-class MenuActivity : AppCompatActivity(), Navigator {
+class MainActivity : AppCompatActivity(), Navigator {
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: MainViewModel
 
@@ -67,7 +63,7 @@ class MenuActivity : AppCompatActivity(), Navigator {
     }
 
     private fun updateUI() {
-        var fragment = currentFragment
+        val fragment = currentFragment
 
         if (fragment is HasCustomTitle) {
             binding.toolbar.toolbar.title = getString(fragment.getTitleRes())

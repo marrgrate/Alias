@@ -1,4 +1,4 @@
-package com.example.alias.domain
+package com.example.alias.domain.entities
 
 object  Game {
     var playtime: Long = 60000               //ms

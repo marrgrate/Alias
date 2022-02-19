@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alias.R
-import com.example.alias.domain.Team
+import com.example.alias.domain.entities.Team
 import com.example.alias.presentation.adapters.callbacks.TeamDiffCallback
 
 

@@ -1,7 +1,8 @@
-package com.example.alias.domain
+package com.example.alias.domain.repository
 
 import android.content.Context
 import androidx.lifecycle.LiveData
+import com.example.alias.domain.entities.Team
 
 interface GameRepository {
     

@@ -1,7 +1,7 @@
 package com.example.alias.presentation.viewmodels
 
 import androidx.lifecycle.ViewModel
-import com.example.alias.domain.Game
+import com.example.alias.domain.entities.Game
 
 class ConfigViewModel : ViewModel() {
 

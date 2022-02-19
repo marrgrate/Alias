@@ -1,6 +1,8 @@
-package com.example.alias.domain
+package com.example.alias.domain.usecases
 
 import androidx.lifecycle.LiveData
+import com.example.alias.domain.repository.GameRepository
+import com.example.alias.domain.entities.Team
 
 class GetTeamListUseCase(private val gameRepository: GameRepository) {
 

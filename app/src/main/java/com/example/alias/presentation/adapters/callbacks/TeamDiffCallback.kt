@@ -1,7 +1,7 @@
 package com.example.alias.presentation.adapters.callbacks
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.alias.domain.Team
+import com.example.alias.domain.entities.Team
 
 class TeamDiffCallback : DiffUtil.ItemCallback<Team>() {
 
