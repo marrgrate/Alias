@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left_team_list"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start_team_list"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_bg_panel_top" />
+        app:srcCompat="@drawable/ic_bg_panel" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_online_team_list"

@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left_mode"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start_mode"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_bg_panel_top" />
+        app:srcCompat="@drawable/ic_bg_panel" />
 
     <TextView
         android:id="@+id/text_view_team_plays_title"

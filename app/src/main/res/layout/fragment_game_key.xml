@@ -15,13 +15,13 @@
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left_mode"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start_mode"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_bg_panel_top" />
+        app:srcCompat="@drawable/ic_bg_panel" />
 
     <Button
         android:id="@+id/button_next_create_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_dark_button_bg"
+        android:background="@drawable/ic_dark_button"
         android:elevation="4dp"
         android:text="@string/next_button"
         android:textAllCaps="false"
@@ -64,11 +64,21 @@
         android:textColor="@color/colorMain"
         android:textSize="16sp"
         android:translationZ="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/text_view_key"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toBottomOf="@+id/text_view_title_game_key" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/ic_kvetka"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_key"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/guideline14" />
 
     <TextView
         android:id="@+id/text_view_key"
@@ -82,9 +92,7 @@
         android:translationZ="2dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_subtitle_game_key" />
+        app:layout_constraintStart_toStartOf="@+id/guideline14" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline17"
@@ -98,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_right_mode"

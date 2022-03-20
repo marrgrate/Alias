@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left_mode"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start_mode"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_bg_panel_top" />
+        app:srcCompat="@drawable/ic_bg_panel" />
 
     <Button
         android:id="@+id/button_create"

@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left_mode"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start_mode"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_bg_panel_top" />
+        app:srcCompat="@drawable/ic_bg_panel" />
 
     <include
         android:id="@+id/result_action_bar"
@@ -102,7 +102,7 @@
         android:id="@+id/button_next_dictionaries"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_dark_button_bg"
+        android:background="@drawable/ic_dark_button"
         android:fontFamily="@font/nunito"
         android:text="@string/next_button"
         android:textAllCaps="false"
