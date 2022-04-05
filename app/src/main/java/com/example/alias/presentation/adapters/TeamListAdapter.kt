@@ -12,7 +12,7 @@ import com.example.alias.domain.entities.Team
 import com.example.alias.presentation.adapters.callbacks.TeamDiffCallback
 
 
-class TeamListAdapter : ListAdapter<Team, TeamListAdapter.TeamViewHolder>(TeamDiffCallback()) {
+class   TeamListAdapter : ListAdapter<Team, TeamListAdapter.TeamViewHolder>(TeamDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(

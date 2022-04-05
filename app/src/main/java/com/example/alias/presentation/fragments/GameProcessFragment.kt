@@ -40,12 +40,6 @@ class GameProcessFragment : Fragment() {
         setupOnClickListeners()
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-
-        _binding = null
-    }
-
     private fun onSkipWordPressed() {
         binding.imageButtonWordSkip.setOnClickListener {
             viewModel.skipWord(binding.word.toString())
@@ -82,6 +76,7 @@ class GameProcessFragment : Fragment() {
 
     private fun checkWinner() {
         if (viewModel.winScore == viewModel.currentTeam.result) {
+            parentFragmentManager.clearBackStack("game")
             navigator().showGameFinishScreen()
         }
     }

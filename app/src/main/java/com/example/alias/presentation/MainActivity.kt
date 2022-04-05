@@ -39,13 +39,21 @@ class MainActivity : AppCompatActivity(), Navigator {
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
         if (savedInstanceState == null) {
-            launchFragment(StartMenuFragment())
+            supportFragmentManager
+                .beginTransaction()
+                .add(binding.menuContainer.id, StartMenuFragment())
+                .commit()
         }
 
         viewModel.parseDictionariesName(applicationContext)
 
 
         supportFragmentManager.registerFragmentLifecycleCallbacks(fragmentListener, false)
+
+
+        binding.toolbar.backArrow.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     override fun onDestroy() {
@@ -54,8 +62,9 @@ class MainActivity : AppCompatActivity(), Navigator {
     }
 
     private fun launchFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .addToBackStack(null)
+        supportFragmentManager
+            .beginTransaction()
+            .addToBackStack("game")
             .replace(binding.menuContainer.id, fragment)
             .commit()
 
@@ -66,10 +75,12 @@ class MainActivity : AppCompatActivity(), Navigator {
         val fragment = currentFragment
 
         if (fragment is HasCustomTitle) {
-            binding.toolbar.toolbar.title = getString(fragment.getTitleRes())
+            binding.toolbar.textView.text = getString(fragment.getTitleRes())
             binding.toolbar.toolbar.visibility = View.VISIBLE
-
+            binding.toolbar.backArrow.visibility = View.VISIBLE
         } else {
+            binding.toolbar.textView.visibility = View.GONE
+            binding.toolbar.backArrow.visibility = View.GONE
             binding.toolbar.toolbar.visibility = View.GONE
         }
 
