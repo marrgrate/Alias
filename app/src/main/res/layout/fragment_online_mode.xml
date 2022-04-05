@@ -8,32 +8,32 @@
         android:id="@+id/bg_panel_online_mode"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/ic_bg_panel"
         app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_mode"
         app:layout_constraintEnd_toStartOf="@+id/gl_panel_right_mode"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left_mode"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start_mode"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_bg_panel" />
+        app:layout_constraintVertical_bias="0.0"/>
 
     <Button
         android:id="@+id/button_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_button_mode"
+        android:elevation="4dp"
+        android:fontFamily="@font/nunito"
         android:paddingBottom="10dp"
         android:text="@string/create_game"
-        android:textColor="@color/colorMain"
-        android:fontFamily="@font/nunito"
-        android:elevation="4dp"
-        android:translationZ="2dp"
-        android:textSize="22sp"
         android:textAllCaps="false"
+        android:textColor="@color/colorMain"
+        android:textSize="22sp"
+        android:translationZ="2dp"
         app:layout_constraintBottom_toTopOf="@+id/button_join"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toTopOf="@+id/bg_panel_online_mode" />
+        app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
     <Button
         android:id="@+id/button_join"
@@ -57,21 +57,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_right_mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_left_mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_start_mode"
@@ -100,6 +100,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

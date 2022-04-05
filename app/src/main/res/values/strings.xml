@@ -2,6 +2,7 @@
     <string name="menu_title">Меню</string>
     <string name="app_name">ALIAS</string>
     <string name="app_name_extended">па-беларуску</string>
+    <string name="app_name_bel">АЛІЯС</string>
     <string name="play_button">Пачаць</string>
     <string name="start_button">Пачаць гульню!</string>
     <string name="rules_button">Правілы</string>
@@ -14,11 +15,10 @@
     <string name="mode_title">Рэжым</string>
     <string name="choose_mode">Абярыце рэжым</string>
     <string name="rules_title">Правілы</string>
-    <string name="rules_offline_content">Неабходна патлумачыць чальцам
-        сваёй каманды як мага больш слоў за адведзены час.
-        Нельга выкарыстоўваць аднакарэнныя і іншамоўныя словы.
-        Перамагае каманда, гульцы якой хутчэй набяруць
-        зададзеную колькасць слоў.</string>
+    <string name="rules_offline_content">Патлумачце слова,
+        якое паявіцца на экране,
+        не ўжываючы сінонімы і
+        аднакарэнныя словы.</string>
     <string name="rules_online_content">У гульні па-сетцы кожны ігрок гуляе са сваёй прылады,
         або выкарыстўоваецца адна прылада на каманду.</string>
     <string name="teams_title">Каманды</string>
@@ -46,7 +46,8 @@
     <string name="create_game">Стварыць гульню</string>
     <string name="join_game">Далучыцца</string>
     <string name="title_game_key">Ключ да гульні</string>
-    <string name="subtitle_game_key">Пакажыце ключ астатнім, каб яны маглі далучыцца</string>
+    <string name="subtitle_game_key">Пакажыце ключ астатнім,/n
+        каб яны маглі далучыцца</string>
     <string name="title_enter_key">Увядзіце ключ:</string>
     <string name="subtitle_enter_key">Ключ можна даведацца ў стваральніка</string>
     <string name="toolbar_title_mode">Рэжым</string>
@@ -58,4 +59,5 @@
     <string name="next_team">Наступная каманда!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="code_hint">Націсніце, каб увесці код</string>
 </resources>

@@ -9,13 +9,13 @@
         android:id="@+id/panel_online_team_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/ic_bg_panel"
         app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_team_list"
         app:layout_constraintEnd_toStartOf="@+id/gl_panel_right_team_list"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left_team_list"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start_team_list"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_bg_panel" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_online_team_list"
@@ -33,14 +33,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_left_team_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_start_team_list"
@@ -75,13 +75,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.27" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.78" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

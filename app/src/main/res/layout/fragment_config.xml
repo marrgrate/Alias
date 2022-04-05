@@ -9,13 +9,13 @@
         android:id="@+id/bg_panel_config"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/ic_bg_panel"
         app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_config"
         app:layout_constraintEnd_toStartOf="@+id/gl_panel_right_config"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left_config"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start_config"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_bg_panel" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/text_view_max_words_num"
@@ -95,16 +95,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_dark_button_short"
-        android:text="@string/approve_button"
-        android:textSize="24sp"
-        android:textAllCaps="false"
         android:fontFamily="@font/nunito"
-        android:textColor="@color/colorMain"
         android:paddingBottom="10dp"
+        android:text="@string/approve_button"
+        android:textAllCaps="false"
+        android:textColor="@color/colorMain"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/bg_panel_config"
         app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
         app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"
-        app:layout_constraintTop_toTopOf="@+id/gl_center" />
+        app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_center"
@@ -118,14 +118,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_left_config"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_start_config"
@@ -160,5 +160,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,13 +10,13 @@
         android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/ic_bg_panel"
         app:layout_constraintBottom_toTopOf="@+id/gl_panel_end"
         app:layout_constraintEnd_toStartOf="@+id/gl_panel_right"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_bg_panel"
         tools:ignore="ContentDescription" />
 
     <ImageView
@@ -24,45 +24,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_illustration1_rules"
-        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
         app:layout_constraintTop_toBottomOf="@+id/guideline8"
         tools:ignore="ContentDescription" />
 
-    <ImageView
-        android:id="@+id/illustration2_rules"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/text_rules"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_illustration2_rules"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/gl_panel_end"
-        app:layout_constraintEnd_toStartOf="@+id/guideline13"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toBottomOf="@+id/guideline8"
-        tools:ignore="ContentDescription" />
-
-    <ScrollView
-        android:layout_width="252dp"
-        android:layout_height="230dp"
+        android:fontFamily="@font/nunito"
+        android:text="@string/rules_offline_content"
+        android:textColor="@color/colorMain"
+        android:textSize="16sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         app:layout_constraintBottom_toTopOf="@+id/illustration1_rules"
-        app:layout_constraintEnd_toStartOf="@+id/guideline13"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toTopOf="@+id/gl_panel_start">
-
-        <TextView
-            android:id="@+id/rules_content"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:fontFamily="@font/nunito"
-            android:gravity="center"
-            android:paddingStart="20dp"
-            android:paddingTop="40dp"
-            android:paddingEnd="16dp"
-            android:text="@string/rules_offline_content"
-            android:textColor="@color/colorMain"
-            android:textSize="20sp" />
-    </ScrollView>
+        app:layout_constraintEnd_toStartOf="@+id/btn_next"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
     <ImageButton
         android:id="@+id/btn_next"
@@ -88,21 +69,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_panel_start"
@@ -131,5 +112,62 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <ImageView
+        android:id="@+id/dot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintStart_toStartOf="@+id/flow"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:layout_constraintRight_toLeftOf="@id/dot2"
+        app:srcCompat="@drawable/ic_dot_dark" />
+
+    <ImageView
+        android:id="@+id/dot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dot1"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:srcCompat="@drawable/ic_dot_light" />
+
+    <ImageView
+        android:id="@+id/dot3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/flow"
+        app:layout_constraintStart_toEndOf="@+id/dot2"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:srcCompat="@drawable/ic_dot_light" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:constraint_referenced_ids="dot1,dot2,dot3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
