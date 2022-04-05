@@ -11,6 +11,7 @@ import com.example.alias.databinding.FragmentGameProcessBinding
 import com.example.alias.presentation.contracts.navigator
 import com.example.alias.presentation.viewmodels.GameProcessViewModel
 import java.lang.RuntimeException
+import java.util.*
 
 class GameProcessFragment : Fragment() {
     private lateinit var viewModel: GameProcessViewModel
@@ -64,8 +65,10 @@ class GameProcessFragment : Fragment() {
     private fun runTimer() {
         object : CountDownTimer(viewModel.gameTime, 1000){
             override fun onTick(p0: Long) {
-
-                binding.timer.text = (p0 / 1000).toString()
+                val seconds = (p0 / 1000)
+                val minutes = seconds / 60
+                val secs = seconds % 60
+                binding.timer.text = "$minutes : $secs"
             }
 
             override fun onFinish() {

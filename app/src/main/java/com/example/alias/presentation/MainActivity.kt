@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity(), Navigator {
 
         if (fragment is HasCustomTitle) {
             binding.toolbar.textView.text = getString(fragment.getTitleRes())
+            binding.toolbar.textView.visibility = View.VISIBLE
             binding.toolbar.toolbar.visibility = View.VISIBLE
             binding.toolbar.backArrow.visibility = View.VISIBLE
         } else {
