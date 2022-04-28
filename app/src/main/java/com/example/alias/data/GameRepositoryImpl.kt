@@ -136,7 +136,7 @@ object GameRepositoryImpl : GameRepository {
     }
 
     override fun closeGame() {
-        game.guessedWordCounter = 0
+        game.reset()
         usedWordsList.clear()
         teamList.clear()
         updateUsedWordsList()

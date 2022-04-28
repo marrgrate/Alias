@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.alias.databinding.FragmentGameProcessBinding
+import com.example.alias.domain.entities.Game
 import com.example.alias.presentation.contracts.navigator
 import com.example.alias.presentation.viewmodels.GameProcessViewModel
 import java.lang.RuntimeException
@@ -79,7 +80,9 @@ class GameProcessFragment : Fragment() {
 
     private fun checkWinner() {
         if (viewModel.winScore == viewModel.currentTeam.result) {
+            Game.winner = viewModel.currentTeam.name
             parentFragmentManager.clearBackStack("game")
+            viewModel.closeGame()
             navigator().showGameFinishScreen()
         }
     }

@@ -17,6 +17,7 @@ class GameProcessViewModel : ViewModel() {
     private val parseWordUseCase = ParseWordsUseCase(repository)
     private val getWordsUseCase = GetWordsUseCase(repository)
     private val getTeamListUseCase = GetTeamListUseCase(repository)
+    private val closeGameUseCase = CloseGameUseCase(repository)
     private val getGetUsedWordsListUseCase = GetUsedWordsListUseCase(repository)
 
     var counter = 0
@@ -41,6 +42,10 @@ class GameProcessViewModel : ViewModel() {
 
     fun nextWord(): String {
         return words[Random.nextInt(0, words.size)]
+    }
+
+    fun closeGame() {
+        closeGameUseCase.closeGame()
     }
 
     private fun nextTeam(): Team {

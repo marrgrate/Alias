@@ -6,6 +6,16 @@ object  Game {
     var dictionary: Int = 0
     var usedWords: List<String> = mutableListOf()
     var winScore = 5
+    var winner: String = ""
+
+    fun reset() {
+        var guessedWordCounter: Int = 0
+        var dictionary: Int = 0
+        var usedWords: List<String> = mutableListOf()
+        var winScore = 5
+        var winner: String = ""
+    }
 }
+
 
 

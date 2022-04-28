@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.alias.databinding.FragmentDictionariesBinding
 import com.example.alias.databinding.FragmentGameFinishBinding
+import com.example.alias.domain.entities.Game
 import com.example.alias.presentation.contracts.navigator
 import java.lang.RuntimeException
 
@@ -27,16 +27,11 @@ class GameFinishFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        onAgainPressed()
+        onPlayAgainPressed()
+        binding.winnerTitle.text = Game.winner
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-
-        _binding = null
-    }
-
-    private fun onAgainPressed() {
+    private fun onPlayAgainPressed() {
         binding.buttonBackToMenu.setOnClickListener { navigator().showStartMenuScreen() }
     }
 }
