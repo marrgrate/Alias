@@ -10,6 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/ic_bg_panel"
+        android:scrollbarSize="8dp"
         app:layout_constraintBottom_toTopOf="@+id/gl_panel_end_config"
         app:layout_constraintEnd_toStartOf="@+id/gl_panel_right_config"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,7 +38,6 @@
         android:progress="60"
         app:layout_constraintBottom_toTopOf="@+id/text_view_time"
         app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"
         app:layout_constraintTop_toBottomOf="@+id/text_view_max_words_num" />
 
@@ -61,7 +61,6 @@
         android:progress="60"
         app:layout_constraintBottom_toTopOf="@+id/gl_center"
         app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"
         app:layout_constraintTop_toBottomOf="@+id/text_view_time" />
 
@@ -92,15 +91,17 @@
 
     <Button
         android:id="@+id/button_confirm_config"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_dark_button_short"
+        android:layout_width="172dp"
+        android:layout_height="56dp"
+        android:background="@drawable/template_big_button"
+        app:backgroundTint="@null"
         android:fontFamily="@font/nunito"
-        android:paddingBottom="10dp"
         android:text="@string/approve_button"
         android:textAllCaps="false"
         android:textColor="@color/colorMain"
         android:textSize="24sp"
+        android:letterSpacing="0.01"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/bg_panel_config"
         app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
         app:layout_constraintStart_toStartOf="@+id/gl_vertical_left"

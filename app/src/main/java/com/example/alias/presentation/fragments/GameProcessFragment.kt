@@ -5,18 +5,21 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.StackView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.alias.databinding.FragmentGameProcessBinding
 import com.example.alias.domain.entities.Game
 import com.example.alias.presentation.contracts.navigator
 import com.example.alias.presentation.viewmodels.GameProcessViewModel
+import com.yuyakaido.android.cardstackview.CardStackView
 import java.lang.RuntimeException
 import java.util.*
 
 class GameProcessFragment : Fragment() {
     private lateinit var viewModel: GameProcessViewModel
     private var _binding: FragmentGameProcessBinding? = null
+    private lateinit var stackView: CardStackView
     private val binding: FragmentGameProcessBinding
         get() = _binding ?: throw RuntimeException("FragmentGameProcessBinding == null!")
 
@@ -35,14 +38,18 @@ class GameProcessFragment : Fragment() {
         viewModel = ViewModelProvider(this)[GameProcessViewModel::class.java]
         viewModel.parseWords(requireContext())
 
-        binding.teamName.text = viewModel.currentTeam.name
-        binding.word.text = viewModel.nextWord()
+        stackView = binding.stackView
 
-        runTimer()
-        setupOnClickListeners()
+        binding.teamName.text = viewModel.currentTeam.name
+
+
+
+
+        //runTimer()
+        //setupOnClickListeners()
     }
 
-    private fun onSkipWordPressed() {
+    /*private fun onSkipWordPressed() {
         binding.imageButtonWordSkip.setOnClickListener {
             viewModel.skipWord(binding.word.toString())
             binding.word.text = viewModel.nextWord()
@@ -56,14 +63,14 @@ class GameProcessFragment : Fragment() {
 
             checkWinner()
         }
-    }
+    }*/
 
-    private fun setupOnClickListeners() {
+   /* private fun setupOnClickListeners() {
         onSkipWordPressed()
         onGuessWordPressed()
-    }
+    }*/
 
-    private fun runTimer() {
+  /*  private fun runTimer() {
         object : CountDownTimer(viewModel.gameTime, 1000){
             override fun onTick(p0: Long) {
                 val seconds = (p0 / 1000)
@@ -85,5 +92,5 @@ class GameProcessFragment : Fragment() {
             viewModel.closeGame()
             navigator().showGameFinishScreen()
         }
-    }
+    }*/
 }

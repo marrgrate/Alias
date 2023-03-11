@@ -49,11 +49,11 @@ class DictionariesFragment : Fragment(), HasCustomTitle {
     override fun getTitleRes(): Int = R.string.dictionaries_title
 
     private fun setupRecyclerView() {
-        with(binding.dictionariesList) {
+       /* with(binding.dictionariesList) {
             dictionariesAdapter = DictionariesAdapter(viewModel.dictionaries)
             adapter = dictionariesAdapter
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        }
+        }*/
     }
 
     private fun onNextPressed() {

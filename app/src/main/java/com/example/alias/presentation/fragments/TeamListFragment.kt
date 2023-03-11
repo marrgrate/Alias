@@ -25,8 +25,6 @@ class TeamListFragment : Fragment(), HasCustomTitle {
     private lateinit var teamListAdapter: TeamListAdapter
     private lateinit var viewModel : TeamListViewModel
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -43,7 +41,7 @@ class TeamListFragment : Fragment(), HasCustomTitle {
         setupRecyclerView()
 
         viewModel = ViewModelProvider(this)[TeamListViewModel::class.java]
-        viewModel.teamList.observe(viewLifecycleOwner) { teamListAdapter.submitList(it) }
+        viewModel.teamList.observe(viewLifecycleOwner) { teamListAdapter.submitList(it.toMutableList()) }
 
         setupOnSwipeListener()
         setupOnClickListeners()
@@ -100,4 +98,5 @@ class TeamListFragment : Fragment(), HasCustomTitle {
         onAddTeamPressed()
         onNextPressed()
     }
+
 }

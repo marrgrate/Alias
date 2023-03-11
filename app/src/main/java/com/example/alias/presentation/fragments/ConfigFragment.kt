@@ -74,9 +74,13 @@ class ConfigFragment : Fragment(), HasCustomTitle {
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seek: SeekBar,
                                            progress: Int, fromUser: Boolean) {
+                viewModel.setWinScore(seek.progress)
+                textView.text = seekBar.progress.toString()
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
+                viewModel.setWinScore(seek.progress)
+                textView.text = seekBar.progress.toString()
             }
 
             override fun onStopTrackingTouch(seek: SeekBar) {

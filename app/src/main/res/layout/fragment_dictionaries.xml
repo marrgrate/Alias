@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,17 +14,60 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/gl_panel_left"
         app:layout_constraintTop_toTopOf="@+id/gl_panel_start"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="TODO" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/dictionaries_list"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline17"
-        app:layout_constraintEnd_toStartOf="@+id/guideline13"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toTopOf="@+id/guideline16"
-        tools:listitem="@layout/dictionary_item" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/dictionary_button1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/ic_bg_button_dictionary_item"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline13"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline14"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline16"-->
+<!--        android:contentDescription="TODO">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingStart="15dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/dictionary_button1"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/dictionary_button1"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/dictionary_button1">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:background="@drawable/ic_random_dictionary"-->
+<!--                android:contentDescription="TODO" />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/dictionary_name1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/nunito"-->
+<!--                    android:textColor="@color/colorMain"-->
+<!--                    android:textSize="24sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/disclaimer1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/nunito"-->
+<!--                    android:gravity="bottom"-->
+<!--                    android:textColor="@color/colorMain"-->
+<!--                    android:textSize="16sp" />-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--    </ImageButton>-->
 
     <Button
         android:id="@+id/button_next_dictionaries"

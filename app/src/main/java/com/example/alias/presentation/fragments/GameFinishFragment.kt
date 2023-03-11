@@ -28,7 +28,7 @@ class GameFinishFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         onPlayAgainPressed()
-        binding.winnerTitle.text = Game.winner
+        //binding.winnerTitle.text = Game.winner
     }
 
     private fun onPlayAgainPressed() {

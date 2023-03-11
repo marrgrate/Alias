@@ -21,18 +21,19 @@
         android:id="@+id/recycler_team_list"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_center"
         app:layout_constraintEnd_toStartOf="@+id/gl_right"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/gl_left"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:layout_constraintBottom_toTopOf="@id/button_add_team"
         tools:listitem="@layout/team_item" />
 
     <Button
         android:id="@+id/button_next_screen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_dark_button_short"
+        android:layout_width="171dp"
+        android:layout_height="56dp"
+        android:background="@drawable/template_big_button"
+        app:backgroundTint="@null"
         android:text="@string/next_button"
         android:textSize="24sp"
         android:textAllCaps="false"
@@ -50,16 +51,18 @@
         android:id="@+id/button_add_team"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_button_add_team"
-        android:text="@string/add_team"
-        android:textSize="16sp"
-        android:textAllCaps="false"
+        android:background="@drawable/template_add_team_btn"
+        app:backgroundTint="@null"
         android:fontFamily="@font/nunito"
-        android:textColor="@color/colorMain"
         android:paddingBottom="5dp"
+        android:text="@string/add_team"
+        android:textAllCaps="false"
+        android:textColor="@color/colorMain"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
         app:layout_constraintEnd_toStartOf="@+id/gl_right"
-        app:layout_constraintStart_toStartOf="@+id/gl_left" />
+        app:layout_constraintStart_toStartOf="@+id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_team_list" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_center"
@@ -122,6 +125,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.63" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,10 +5,6 @@ import androidx.lifecycle.LiveData
 import com.example.alias.domain.entities.Team
 
 interface GameRepository {
-    
-    fun addTeam(team: Team)
-
-    fun deleteTeam(team: Team)
 
     fun changeDictionary(dictionary:  Int)
 
@@ -19,10 +15,6 @@ interface GameRepository {
     fun guessWord(word: String, team: Team)
 
     fun skipWord(word: String)
-
-    fun editTeamName(team: Team)
-
-    fun getTeamList() : LiveData<List<Team>>
 
     fun closeGame()
 

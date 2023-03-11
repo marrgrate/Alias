@@ -1,8 +1,6 @@
 package com.example.alias.data
 
-
 import android.content.Context
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.alias.domain.entities.Game
@@ -11,47 +9,21 @@ import com.example.alias.domain.entities.Team
 import org.json.JSONObject
 import java.io.IOException
 
-object GameRepositoryImpl : GameRepository {
+class GameRepositoryImpl : GameRepository {
     private var usedWordsList = mutableListOf<String>()
     private var usedWordsListLD = MutableLiveData<List<String>>()
-    private var teamList = mutableListOf<Team>()
-    private var teamListLD = MutableLiveData<List<Team>>()
+
     private var dictionaries = mutableListOf<String>()
     private var gameWords = mutableListOf<String>()
 
-    init {
-        for (i in 0..1) {
-            val team = Team("Team$i", 0)
-            addTeam(team)
-        }
-    }
-
-    private val game: Game = Game
-
-    override fun addTeam(team: Team) {
-        teamList.add(team)
-
-        updateTeamList()
-
-        Log.i("TEAM_COUNT", getTeamList().value?.size.toString())
-    }
-
-    override fun deleteTeam(team: Team) {
-        teamList.remove(team)
-
-        updateTeamList()
-    }
-
-    override fun editTeamName(team: Team) {
-        TODO()
-    }
+    private val game: Game = Game()
 
     override fun changeDictionary(dictionary: Int) {
         game.dictionary = dictionary
     }
 
     override fun changeWinScore(score: Int) {
-        game.winScore = score
+       // game.winScore = score
     }
 
     override fun createGame() {
@@ -68,10 +40,6 @@ object GameRepositoryImpl : GameRepository {
     override fun skipWord(word: String) {
         usedWordsList.add(word)
         updateUsedWordsList()
-    }
-
-    override fun getTeamList(): LiveData<List<Team>> {
-        return teamListLD
     }
 
     override fun getUsedWordsList(): LiveData<List<String>> {
@@ -101,7 +69,6 @@ object GameRepositoryImpl : GameRepository {
                     dictionaries.add(dictionaryName)
                 }
             }
-
         } catch (e: IOException) {
             throw e
         }
@@ -136,15 +103,11 @@ object GameRepositoryImpl : GameRepository {
     }
 
     override fun closeGame() {
-        game.reset()
+        /*game.reset()
         usedWordsList.clear()
         teamList.clear()
         updateUsedWordsList()
-        updateTeamList()
-    }
-
-    private fun updateTeamList() {
-        teamListLD.value = teamList.toList()
+        updateTeamList()*/
     }
 
     private fun updateUsedWordsList() {

@@ -5,7 +5,7 @@ import com.example.alias.data.GameRepositoryImpl
 import com.example.alias.domain.usecases.GetDictionariesUseCase
 
 class DictionariesViewModel : ViewModel() {
-    private var repository = GameRepositoryImpl
+    private var repository = GameRepositoryImpl()
 
     private val getDictionariesUseCase = GetDictionariesUseCase(repository)
 

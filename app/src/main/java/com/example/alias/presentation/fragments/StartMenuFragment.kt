@@ -49,7 +49,7 @@ class StartMenuFragment : Fragment() {
     }
 
     private fun onStartPressed() {
-        binding.buttonStart.setOnClickListener { navigator().showModeMenuScreen() }
+        binding.buttonStart.setOnClickListener { navigator().showTeamListScreen() }
     }
 
     private fun onRulesPressed() {

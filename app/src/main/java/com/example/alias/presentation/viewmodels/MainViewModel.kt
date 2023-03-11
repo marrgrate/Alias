@@ -12,17 +12,5 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel() {
-    private var repository = GameRepositoryImpl
-
-    private val parseDictionariesNameUseCase = ParseDictionariesNameUseCase(repository)
-
-    fun parseDictionariesName(context: Context) {
-        viewModelScope.launch(Dispatchers.IO) {
-            async {
-                parseDictionariesNameUseCase.parseDictionariesName(context)
-            }
-        }
-
-
-    }
+    private var repository = GameRepositoryImpl()
 }

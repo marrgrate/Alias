@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "710412001295",
+    "project_id": "belalias",
+    "storage_bucket": "belalias.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710412001295:android:df068d8244726554c6c37a",
+        "android_client_info": {
+          "package_name": "com.example.alias"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710412001295-9iklti2f33862v47eqgutfmoao2js531.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJPjwE2BKOzOCvOh0NwPvtGbLCFnDFofs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710412001295-9iklti2f33862v47eqgutfmoao2js531.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

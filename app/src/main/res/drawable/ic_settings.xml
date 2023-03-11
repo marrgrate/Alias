@@ -2,13 +2,6 @@
     android:viewportHeight="86" android:viewportWidth="86"
     android:width="86dp" xmlns:aapt="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillAlpha="0.6" android:pathData="M43,11L43,11c17.7,0 32,14.3 32,32l0,0c0,17.7 -14.3,32 -32,32l0,0c-17.7,0 -32,-14.3 -32,-32l0,0C11,25.3 25.3,11 43,11z">
-        <aapt:attr name="android:fillColor">
-            <gradient android:endX="71.9589" android:endY="47.2024"
-                android:startX="16.4829" android:startY="39.152" android:type="linear">
-                <item android:color="#FFDEE9F2" android:offset="0"/>
-                <item android:color="#FFF5F5F7" android:offset="1"/>
-            </gradient>
-        </aapt:attr>
     </path>
     <path android:fillColor="#F3F3F6"
         android:pathData="M55.1,29.4l3.1,1.2l0,0c-0.2,-0.4 -0.6,-0.8 -1,-1c-0.4,-0.2 -0.9,-0.4 -1.4,-0.4l-0.9,0.1L55.1,29.4L55.1,29.4C55,29.4 55.1,29.4 55.1,29.4z"

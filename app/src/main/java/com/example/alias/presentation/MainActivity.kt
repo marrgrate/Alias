@@ -1,6 +1,5 @@
 package com.example.alias.presentation
 
-
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -13,11 +12,9 @@ import com.example.alias.presentation.contracts.Navigator
 import com.example.alias.presentation.fragments.*
 import com.example.alias.presentation.viewmodels.MainViewModel
 
-
 class MainActivity : AppCompatActivity(), Navigator {
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: MainViewModel
-
     private val currentFragment: Fragment
         get() = supportFragmentManager.findFragmentById(binding.menuContainer.id)!!
 
@@ -37,7 +34,7 @@ class MainActivity : AppCompatActivity(), Navigator {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-
+        window.decorView.visibility = View.GONE
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
@@ -45,14 +42,11 @@ class MainActivity : AppCompatActivity(), Navigator {
                 .commit()
         }
 
-        viewModel.parseDictionariesName(applicationContext)
-
-
         supportFragmentManager.registerFragmentLifecycleCallbacks(fragmentListener, false)
 
 
         binding.toolbar.backArrow.setOnClickListener {
-            onBackPressed()
+            onBackPressedDispatcher.onBackPressed()
         }
     }
 
